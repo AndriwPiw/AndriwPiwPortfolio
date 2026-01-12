@@ -1,0 +1,1826 @@
+/* ESTRUCTURA DEL DOCUMENTO index.css */
+
+
+/* NORMALIZADOR */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    font-size: 100%;
+    font-family: system-ui, sans-serif;
+
+
+    /* RESET PARA FORMULARIO */
+    form,
+    input,
+    textarea,
+    select,
+    legend,
+    fieldset,
+    button {
+        font-size: inherit;
+        font-family: inherit;
+        display: block;
+
+    }
+
+
+
+    /* CUSTOM PROPERTIES */
+    /* Colores */
+    /* Color principal-acento */
+    --primary-colour-purple : rgb(110, 48, 209);
+    /* Colores secundarios */
+    --secondary-colour-black: rgb(0, 0, 0);
+    --secondary-colour-white: white;
+    --secondary-colour-grey: rgb(221, 221, 221);
+
+    /* Tipografía */
+    /* Tipografía principal */
+    --font-family-space-grotesk: "Space Grotesk",
+    sans-serif;
+    /* Tipografías secundarias */
+    --font-family-space-mono: "Space Mono",
+    sans-serif;
+    --font-family-jacquard-12: "Jacquard 12",
+    system-ui;
+    --font-family-jacquard-24: "Jacquard 24",
+    system-ui;
+
+
+    /* Tamaños tipografías */
+    /* Tamaño texto cuerpo */
+    --font-size-body: 1em;
+
+    /* Tamaño texto encabezado h1 */
+    --font-size-heading: 5.2em;
+    /* Tamaño texto encabezado h2 */
+    --font-size-heading-h2: 4em;
+    /* Tamaño texto encabezado h3 */
+    --font-size-heading-h3: 2.5em;
+    /* Tamaño texto encabezado h4 */
+    --font-size-heading-h4: 2.2em;
+    /* Tamaño texto encabezado h5 */
+    --font-size-heading-h4: 2em;
+
+    /* Tamaño texto span - Marcadores de tipo de proyecto (Branding, Packaging...) */
+    --font-size-spanProjectType: 0.9em;
+
+    /* Tamaño texto enlaces */
+    --font-size-a: 1em;
+
+
+    /* Márgenes y paddings generales */
+    --spacing-section: 6rem;
+    --spacing-page: 2rem;
+    --spacing-column: 1rem;
+
+
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em,
+mark,
+b,
+u,
+i,
+a {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+img,
+svg,
+picture,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: initial;
+}
+
+li {
+    list-style: none;
+}
+
+
+mark {
+    background-color: transparent;
+}
+
+/* ESCONDER SCROLL BAR */
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ENLAZAMOS LA TIPOGRAFÍA VARIABLE */
+.montserrat-variable {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 2rem;
+    font-style: normal;
+}
+
+.jacquard-24-regular {
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.jacquard-12-regular {
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+/* Animación para la carga de imágenes */
+
+@keyframes imageLoading {
+    0% {
+        transform: translateX(-25px);
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+}
+
+
+/* GENERAL */
+
+body {
+    background-color: var(--secondary-colour-black);
+    position: relative;
+
+    /* cursor: none; */
+}
+
+
+
+/* MOUSE-CURSOR */
+/* .Cursor {
+
+    width: 2em;
+    height: 2em;
+    border: 2px solid var(--primary-colour-purple);
+    border-radius: 50%;
+
+    position: fixed;
+    top: -0.625rem;
+    left: -0.625rem;
+
+    transform: all 1s ease;
+    pointer-events: none;
+
+    z-index: 2;
+} */
+
+
+
+/* PRE-LOAD - PÁGINA TRANSITORIA DE INICIO */
+
+.Pre-load {
+    background-color: var(--secondary-colour-black);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0rem;
+}
+
+.isClicked {
+    animation: slideUp 2s ease-out 1 both;
+}
+
+@keyframes slideUp {
+
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-100rem);
+    }
+
+}
+
+
+.Pre-load-span {
+    color: var(--primary-colour-purple);
+    font-size: 45vh;
+    transform: scaleY(2);
+
+    margin-bottom: 80px;
+
+    pointer-events: none;
+}
+
+Button.Pre-load--click {
+    color: var(--secondary-colour-white);
+    background-color: var(--secondary-colour-black);
+    margin-bottom: 80px;
+}
+
+Button.Pre-load--click:hover {
+    color: var(--primary-colour-purple);
+}
+
+.Pre-load--loading {
+    width: 300px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Loading-span {
+    color: var(--secondary-colour-white);
+    margin-bottom: 9.6px;
+
+    text-transform: uppercase;
+}
+
+.Loading-bar {
+    width: 100%;
+    height: 20px;
+
+    border: 1px solid var(--secondary-colour-white);
+    border-radius: .625rem;
+    padding: 4.8px;
+
+    overflow: hidden;
+
+}
+
+.Loading-fill {
+    background-color: var(--secondary-colour-white);
+    width: 12.5rem;
+    height: 100%;
+    border-radius: .625rem;
+
+    animation: loadingAnimation 2s ease infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(300%);
+    }
+}
+
+
+/* MAIN */
+
+.Main {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+/* HOME LOGO - HEADER LOGO */
+
+.Main-homeButton {
+    width: 100px;
+    position: fixed;
+    top: 1px;
+    left: 30px;
+    z-index: 1;
+
+}
+
+.Main-homeButton .isActive {
+    transition: all 3s ease;
+    opacity: 1;
+}
+
+.Main-homeButton .notActive {
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.Main-logo {
+    width: 10vh;
+
+    animation: imageLoading 1s ease both;
+}
+
+
+
+.Clickeye {
+    position: fixed;
+
+    top: 3.5vh;
+    left: 15vh;
+
+    animation: shaking 0.2s ease infinite;
+}
+
+/* añadir un active para desactivar en recent projects */
+/* añadir efecto de contra más te acercas más rápido va? */
+@keyframes shaking {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+
+
+/* MAIN HEADER*/
+
+.Main-header {
+    position: fixed;
+    top: 0;
+
+
+    min-width: 20vh;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    transition: all 0.8s ease;
+
+}
+
+/* El header está desactivado al entrar a la web, solo se activa al clicar en el logo */
+/* Al activarse se desplaza desde el borde de la web superponiéndose sobre el contenido principal */
+.Main-header.notActive {
+    transform: translateX(-300px);
+}
+
+.Main-header.isActive {
+    transform: translateX(0px);
+}
+
+
+
+/* Divisor del header - Agrupa la presentación general de la web e información relevante */
+.Header-presentation {
+    background-color: var(--secondary-colour-white);
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid var(--secondary-colour-black);
+
+
+    z-index: 1;
+    position: relative;
+
+}
+
+.Presentation-divider {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+.Header-h1 {
+    font-weight: 500;
+    font-size: var(--font-size-heading);
+    font-family: var(--font-family-space-grotesk);
+    padding: 0.5rem;
+
+}
+
+.Header-role {
+    font-family: var(--font-family-space-grotesk);
+    color: var(--primary-colour-purple);
+    font-size: 1.3em;
+}
+
+
+
+
+/*  Divisor del header - Contiene el navegador a las otras partes principales de la web*/
+.Header-wrapper {
+    width: 100%;
+    background-color: var(--secondary-colour-white);
+}
+
+.Header-nav {
+    width: 100%;
+    background-color: var(--secondary-colour-white);
+}
+
+.Tabs-ul {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.Tabs-li {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--secondary-colour-black);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.Tabs-a {
+    font-family: var(--font-family-space-mono);
+    font-size: 1.25em;
+    transition: all 0.5s ease;
+}
+
+/* Al pasar el ratón por encima de los enlaces su formato cambia, De igual manera la clase isActive indica en qué página nos encontramos */
+.Tabs-a:hover {
+    color: var(--primary-colour-purple);
+    padding: 10px 0 10px 0;
+}
+
+.Tabs-a.isActive {
+    color: var(--primary-colour-purple);
+}
+
+
+/* Redes sociales del Header */
+.Rrss {
+    border-top: 1px solid var(--secondary-colour-black);
+    padding: .5125rem;
+    transition: all 0.5s ease;
+}
+
+.Rrss-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0.2rem 0rem;
+}
+
+.Rs-img {
+    min-height: 1.5rem;
+    max-height: 1.5rem;
+}
+
+
+
+/* Post-Its decorativos del Header -> marcadores de página y hyperlinks varios */
+.Header-markers {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-between;
+}
+
+.Markers-ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.3rem;
+}
+
+.Markers-li {
+    background-color: var(--secondary-colour-grey);
+    padding: .625rem .3125rem;
+
+    width: 1rem;
+    min-height: 4rem;
+    color: var(--secondary-colour-grey);
+
+    text-align: center;
+    border-radius: 0px 3px 3px 0px;
+
+    writing-mode: vertical-rl;
+
+    transition: all 0.5s ease;
+}
+
+/* Los marcadores permanecen escondidos 
+Cuando se pasa el mouse por encima estos crecen, mostrando el texto de los vínculos*/
+.Markers-li:hover {
+    width: 2rem;
+    color: var(--secondary-colour-black);
+}
+
+/* Si el marcador está activado éste se muestra, cambiando de formato */
+.Markers-li.isActive {
+    background-color: var(--primary-colour-purple);
+    width: 2rem;
+    color: var(--secondary-colour-white);
+}
+
+.Markers-a {
+    font-family: var(--font-family-space-grotesk);
+    font-size: var(--font-size-a);
+}
+
+
+
+/* MARQUESINA */
+/* Elemento que se repite en todas las partes de la web
+Su función principal es indicar información clave sobre la página que se está visitando, indicaciones de scroll y decoración mínima */
+
+/* .Main-marquee {
+background-color: var(--secondary-colour-black);
+    min-height: 300vh;
+   min-width: 2vw;
+
+} */
+
+
+
+
+
+
+/* MAIN CONTENT*/
+.Main-content {}
+
+.Main-h2 {
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-grotesk);
+    font-weight: 500;
+    font-size: var(--font-size-heading-h2);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    position: fixed;
+    left: 0.3em;
+    bottom: 0;
+    margin-bottom: 2vh;
+}
+
+/* RECENT PROJECTS */
+.recentProjects {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100vh;
+
+    background-color: var(--secondary-colour-white);
+    display: flex;
+    flex-flow: column nowrap;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+
+.recentProjects-project {
+    min-height: 100vh;
+    padding-left: 25vh;
+
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    scroll-snap-align: start;
+    overflow: hidden;
+
+
+    animation: flow-left 1.5s ease 1;
+}
+
+
+
+
+.recentProjects-images {
+    overflow: hidden;
+}
+
+img.recentProjects-preview {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease;
+    animation: flow-left 1.5s ease 1;
+
+}
+
+.recentProjects-preview:hover {
+    transform: scale(1.1);
+}
+
+.recentProjects-info {
+    padding: 10px 30px 50px;
+    max-width: 30%;
+    min-height: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+
+    transition: all .5s ease;
+
+}
+
+
+
+.recentProjects-number {
+    font-size: 15em;
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-grotesk);
+    animation: flow-left 1s ease 1;
+}
+
+
+.recentProjects-h3 {
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-grotesk);
+    font-weight: 700;
+    font-size: var(--font-size-heading-h3);
+
+    transition: all 0.3s ease;
+    animation: flow-left 1.5s ease 1;
+
+    margin-bottom: 15px;
+}
+
+.recentProjects-h3:hover {
+    color: var(--primary-colour-purple);
+}
+
+.recentProjects-span {
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-mono);
+    font-size: var(--font-size-spanProjectType);
+    margin-bottom: 0.5rem;
+    text-align: right;
+    font-style: italic;
+    animation: flow-left 1.5s ease 1;
+
+}
+
+
+.recentProjects-p {
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-mono);
+    font-size: var(--font-size-body);
+    text-align: justify;
+    animation: flow-left 1.5s ease 1;
+
+
+}
+
+@keyframes flow-left {
+    0% {
+
+        transform: translateX(-50px);
+    }
+
+    100% {
+
+        transform: translateX(0px);
+    }
+}
+
+
+
+/* PROJECT GALLERY */
+.projectGallery {
+    padding-left: 25vh;
+
+    background-color: var(--secondary-colour-white);
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: end;
+
+    gap: 3rem;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+
+}
+
+
+/* navegador de contenido de la galería de proyectos */
+.projectGallery-nav {}
+
+.GalleryNav {
+    position: fixed;
+    top: 5vh;
+    left: 20vh;
+}
+
+.GalleryNav-ul {
+    width: 40vh;
+}
+
+.GalleryNav-li {
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-mono);
+    font-size: 1.3em;
+    font-variant: small-caps;
+
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--secondary-colour-black);
+
+    transition: all 0.5s ease;
+}
+
+.GalleryNav-li:hover {
+    padding-left: 2rem;
+    color: var(--secondary-colour-black);
+}
+
+/* Con isActive y la pseudoclase before marcamos qué filtro de proyectos está seleccionado */
+.GalleryNav-li.isActive {
+    padding-left: 2rem;
+    color: var(--primary-colour-purple);
+    font-style: italic;
+}
+
+.GalleryNav-li.isActive::before {
+    content: ">";
+}
+
+
+/* Clase contenedora de los proyectos que se muestran en la galería */
+.projectGallery-wrapper {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+
+}
+
+/* Clase general para cada proyecto de la galería */
+.projectGallery-project {
+    min-width: 100%;
+    min-height: 30rem;
+
+
+    display: none;
+
+    margin-bottom: 2rem;
+
+
+}
+
+/* Cuando se selecciona un tipo de proyecto que visualizar en el navegador de la galería cada proyecto tiene una pequeña animación para que aparezca */
+.projectGallery-project.isActive {
+    display: flex;
+    flex-flow: column nowrap;
+
+    animation: projectgallery-slideIn 0.8s ease 1 both;
+}
+
+@keyframes projectgallery-slideIn {
+
+    0% {
+
+        transform: translateX(-50px);
+
+    }
+
+    50% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+
+        transform: translateX(0px);
+    }
+
+}
+
+
+.projectGallery-imgContainer {
+    min-height: 60%;
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+.projectGallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.projectGallery-infoContainer {
+    min-height: 35%;
+    padding: 1.25em;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    gap: 2rem;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.dividerTitle {
+    min-width: 40%;
+}
+
+.dividerBody {
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: end;
+}
+
+
+.projectGallery-h3 {
+    font-size: var(--font-size-heading-h3);
+    font-weight: 600;
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-grotesk);
+    margin-bottom: 0.6rem
+}
+
+.projectGallery-h4 {
+    font-size: var(--font-size-heading-h5);
+    font-style: italic;
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-mono);
+
+
+}
+
+.projectGallery-p {
+    text-align: justify;
+    font-family: var(--font-family-space-mono);
+    font-size: var(--font-size-body);
+}
+
+.projectGallery-a {
+    font-family: var(--font-family-space-mono);
+
+    font-size: 1.3em;
+    font-style: italic;
+
+    transition: color 0.5s ease;
+}
+
+.projectGallery-a:hover {
+    color: var(--primary-colour-purple);
+
+}
+
+
+/* MAIN PROJECT V1 - PROYECTO INDIVIDUAL - Proyecto siendo visualizado*/
+.Project {
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 25vh;
+    padding-right: 2rem;
+    background-color: var(--secondary-colour-white);
+
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.Project-columnWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+
+    position: relative;
+
+
+}
+
+.Project-column {
+    width: 100%;
+    min-height: 50vh;
+
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    animation: flow-left 1.5s ease 1;
+}
+
+.Project-header {
+    margin-bottom: 1.875rem;
+}
+
+.Project-h2 {
+    font-size: var(--font-size-heading-h2);
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-grotesk);
+
+
+}
+
+.Project-h3 {
+    font-size: var(--font-size-heading-h3);
+    font-family: var(--font-family-space-grotesk);
+    margin-bottom: 0.5rem;
+}
+
+.Project-h4 {
+    font-size: var(--font-size-heading-h4);
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-grotesk);
+    margin-bottom: 0.3rem;
+}
+
+.Project-p {
+
+    padding-right: 2rem;
+    color: var(--secondary-colour-black);
+    font-family: var(--font-family-space-mono);
+    font-size: var(--font-size-body);
+    text-align: justify;
+
+    margin-top: 1rem;
+}
+
+.Project-span {
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-mono);
+    font-size: 1.2em;
+    font-style: italic;
+
+}
+
+.Project-body {
+    margin-bottom: 0.3rem;
+}
+
+/* galerías por tamaños */
+.Project-gallery {
+
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    animation: imageLoading 1s ease both;
+}
+
+.Project-gallery--small {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    animation: imageLoading 1s ease both;
+}
+
+.Project-gallery--usmall {
+
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+
+    animation: imageLoading 1s ease both;
+}
+
+
+
+
+.Project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.Project-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* clases para visualización de cartas */
+.card {
+    border-radius: 5px;
+    perspective: 1900px;
+    transition: all 1s ease;
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+}
+
+.card.isActive {
+    opacity: 50%;
+}
+
+.cardViewer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: start;
+    position: relative;
+    perspective: 2000px;
+
+    animation: imageLoading 2s ease both;
+
+}
+
+.cardViewer:hover .cardViewer-front {
+    transform: rotateY(180deg);
+}
+
+.cardViewer:hover .cardViewer-back {
+    transform: none;
+}
+
+.cardViewer-front,
+.cardViewer-back {
+    border-radius: 5px;
+    position: absolute;
+    backface-visibility: hidden;
+
+    box-shadow: black 5px 5px 15px;
+
+    transition: all 1.5s ease;
+}
+
+.cardViewer-imgContainer {
+    width: 70%;
+    overflow: hidden;
+}
+
+/* Anverso carta */
+.cardViewer-front {
+    transform: none;
+}
+
+
+
+.cardViewer-img--front {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Reverso carta */
+.cardViewer-back {
+    transform: rotateY(180deg);
+}
+
+.cardViewer-img--back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* Bloques de contenido */
+.Project-block {
+    margin-bottom: 2.5rem;
+
+
+}
+
+.Block {
+    min-width: 100%;
+    max-height: 50rem;
+}
+
+.Banner {
+    max-height: 15rem;
+}
+
+.Project-ul {
+    padding-left: 5rem;
+    margin-top: 1.5rem;
+}
+
+.Project-li {
+    list-style-type: disc;
+}
+
+.Block-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Overview {
+    width: 40%;
+}
+
+.Project-video {
+    margin-bottom: 2.5rem;
+}
+
+/* Muestrario de colores de cada proyecto */
+.Project-colours {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center; */
+
+    gap: 1rem;
+}
+
+.Project-colour {
+    position: relative;
+}
+
+.Colour-sample {
+    width: 100%;
+    min-height: 5vh;
+}
+
+.Colour-span {
+    color: var(--secondary-colour-white);
+    font-family: var(--font-family-space-grotesk);
+    font-weight: 800;
+    font-size: var(--font-size-heading-h5);
+
+    position: absolute;
+    bottom: .625rem;
+    left: .625rem;
+
+}
+
+/* CARROUSEL */
+.Project-carrousel {
+    max-width: 60vh;
+    max-height: 100vh;
+
+    background-color: var(--secondary-colour-grey);
+}
+
+.Carrousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.Carrousel-wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    transition: all .5s ease;
+}
+
+.Carrousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Carrousel-buttons {
+    width: 100%;
+    min-height: 3.125rem;
+    background-color: var(--secondary-colour-black);
+
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.Carrousel-button {
+    height: 100%;
+    color: aliceblue;
+    width: 3.125rem;
+}
+
+.Carrousel-button--left {
+    border-right: 1px solid var(--secondary-colour-white);
+}
+
+.Carrousel-button--right {
+    border-right: 1px solid var(--secondary-colour-white);
+    transform: rotate(180deg);
+}
+
+.Carrousel-buttonArrow {
+    transform: scale(70%);
+}
+
+
+/* PROJECT MY OWN ANTHOLOGY */
+.CD {
+    margin: auto;
+    width: 70%;
+
+    animation: fullRotation 30s linear both infinite;
+}
+
+@keyframes fullRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* ABOUT ME */
+.About {
+    padding-left: 25vh;
+    background-color: var(--secondary-colour-white);
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+
+}
+
+.About-columnWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.About-column--big {
+    min-width: 60%;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+
+    justify-content: space-between;
+}
+
+.About-column--small {
+    background-color: var(--secondary-colour-black);
+    min-width: 50%;
+
+    overflow: hidden;
+}
+
+.About-textWrapper {
+    position: relative;
+    padding-top: 5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+}
+
+.About-listWrapper {}
+
+.About-clip {
+    max-width: 60px;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+}
+
+.About-idPhoto {
+    width: 10vw;
+    box-shadow: 2px 2px 3px black;
+
+    position: absolute;
+    top: 0.55rem;
+    left: 1rem;
+
+    transform: rotate(-15deg);
+}
+
+.About-imgWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+
+    gap: 2rem;
+}
+
+.About-imgFingerprint {
+    max-width: 80px;
+}
+
+
+
+.About-imgGraph {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+}
+
+
+.About-postIt--normal {
+    min-width: 18.75rem;
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    min-height: 18.75rem;
+    background-color: rgb(255, 243, 135);
+    padding: 2rem;
+
+    box-shadow: 2px 2px 4px black;
+}
+
+.Scribble {
+    width: 30vh;
+    position: absolute;
+    right: -5rem;
+    bottom: -6rem;
+}
+
+.About-bigClue {
+    position: absolute;
+    right: 10vh;
+
+    transform: rotate(10deg);
+}
+
+.Clue {
+    position: relative;
+}
+
+.Clue-p {
+    font-family: var(--font-family-space-mono);
+    font-size: 0.8em;
+
+    margin-bottom: 0.6rem;
+}
+
+.Clue-img {
+    width: 40%;
+    position: absolute;
+}
+
+.tapeTop {
+    top: -1.25rem;
+    left: -2.5rem;
+    transform: rotate(-40deg);
+}
+
+.tapeBottom {
+    right: -4.25rem;
+    bottom: 1.5rem;
+    transform: rotate(40deg);
+}
+
+.About-h3 {
+    font-size: var(--font-size-heading-h3);
+    font-family: var(--font-family-space-mono);
+    color: var(--secondary-colour-black);
+
+    margin-bottom: 0.1rem;
+}
+
+.About-h4 {
+    font-style: italic;
+    font-family: var(--font-family-space-grotesk);
+    font-size: var(--font-size-heading-h4);
+    color: var(--primary-colour-purple);
+
+    margin-bottom: 2rem;
+}
+
+.About-h5 {
+    font-family: var(--font-family-space-grotesk);
+    font-size: 1.2em;
+    text-decoration: underline;
+
+}
+
+.About-ul {
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+}
+
+.About-li {
+    list-style-type: disc;
+    font-size: var(--font-size-body);
+}
+
+.About-span {
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-mono);
+}
+
+.About-a {
+    color: var(--primary-colour-purple);
+    font-family: var(--font-family-space-mono);
+}
+
+.About-p {
+    font-family: var(--font-family-space-mono);
+    font-size: var(--font-size-body);
+
+    margin-bottom: 0.6rem;
+    text-align: justify;
+}
+
+mark {
+    background-color: yellow;
+}
+
+
+
+
+/* @ MEDIA */
+
+
+/* 1500px */
+@media (max-width:1500px) {
+
+    .recentProjects-number {
+        font-size: 6em;
+    }
+
+    /* PROJECT GALLERY */
+    .GalleryNav-ul {
+        width: 30vh;
+    }
+
+
+
+}
+
+/* 1400px */
+@media (max-width:1400px) {
+
+    /* PROJECT GALLERY */
+    .Project-columnWrapper {
+        flex-flow: column nowrap;
+    }
+
+    .projectGallery-imgContainer {
+        min-height: 40%;
+    }
+
+    .projectGallery-infoContainer {
+        flex-flow: column nowrap;
+    }
+
+    /* CARD PROJECT */
+    .cardViewer {
+        display: none;
+    }
+
+    /* ABOUT */
+
+    .About-bigClue {
+        display: none;
+    }
+
+}
+
+/* 1200px */
+@media (max-width:1200px) {
+
+    /* RECENT PROJECTS */
+    .recentProjects-info {
+        max-width: 50%;
+    }
+
+    /* PROJECT GALLERY */
+    .projectGallery-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+
+    }
+
+    .GalleryNav {
+        display: none;
+    }
+
+}
+
+/* 1000px */
+@media (max-width:1000px) {
+
+    /* MAIN CONTENT */
+    .Main-content {}
+
+    /* HEADER */
+    .Main-header {
+        background-color: var(--secondary-colour-white);
+        min-width: 100%;
+        min-height: 10vh;
+        max-height: 10vh;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .Main-header.notActive {
+        transform: none;
+    }
+
+    .Main-header.isActive {
+        transform: none;
+    }
+
+    .Main-homeButton {
+        display: none;
+    }
+
+
+
+    .Main-logo {}
+
+
+    .Header-presentation {
+        min-width: 100%;
+        min-height: 100%;
+        justify-content: start;
+        align-items: center;
+        border-right: none;
+    }
+
+
+    .Header-h1 {
+        display: none;
+    }
+
+    .Header-role {
+        display: none;
+    }
+
+
+    .Tabs {
+        border-bottom: 1px solid var(--secondary-colour-black);
+        display: none;
+    }
+
+    .Tabs.isActive {
+        display: block;
+
+    }
+
+
+    .Tabs-ul {
+        flex-flow: column nowrap;
+    }
+
+    .Tabs-li {}
+
+    .Tabs-a {
+        font-size: 3em;
+
+    }
+
+    .Header-markers {
+        display: none;
+    }
+
+    .Rrss {
+        display: none;
+    }
+
+
+
+    /* MAIN CONTENT */
+
+    .Main-content {
+        margin-top: 10vh;
+    }
+
+
+
+    /* RECENT PROJECTS */
+
+    .recentProjects {
+        scroll-snap-type: y proximity;
+    }
+
+    .recentProjects-project {
+        padding-left: 0px;
+        flex-flow: column-reverse nowrap;
+    }
+
+    .Main-h2 {
+        display: none;
+    }
+
+
+
+    .recentProjects-info {
+        max-width: 100%;
+        min-height: 50%;
+        padding: 10px 40px;
+        justify-content: start;
+    }
+
+    .recentProjects-images {}
+
+
+    .Main-marquee {
+        display: none;
+    }
+
+
+
+
+    /* PROJECT GALLERY */
+
+    .projectGallery {
+        padding: 2vh;
+    }
+
+    .projectGallery-nav {
+        display: none;
+    }
+
+    .projectGallery-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+
+    }
+
+
+    /* PROJECTV1 */
+    .Project {
+        padding: 2rem;
+    }
+
+
+    .Project-column {
+        padding: 0;
+
+    }
+
+    .Project-block {
+        padding: 0;
+    }
+
+    .Block-img {
+        max-height: 60vh;
+    }
+
+    .Project-carrousel{
+        max-width: 100vh;
+        min-width: 100%;
+
+    }
+
+    .Overview {
+        width: 100%;
+    }
+
+
+
+    /* ABOUT */
+    .About {
+        padding: 0vh;
+    }
+
+    .About-columnWrapper {
+        flex-flow: column nowrap;
+    }
+
+    .About-column--small {
+        display: none;
+    }
+
+    .About-idPhoto {
+        display: none;
+    }
+
+    .About-clip {
+        display: none;
+    }
+
+
+}
+
+
+/* 900px */
+@media (max-width:900px) {
+
+
+    /* GALERÍA DE PROYECTOS */
+    .projectGallery-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* 550px */
+@media (max-width:550px) {
+
+    .recentProjects-info {
+        min-height: 60%;
+    }
+
+    /* GALERÍA DE PROYECTOS */
+    .projectGallery-project {
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+
+
+/* UTILITIES / UTILIDADES */
+.purpleFont {
+    color: var(--primary-colour-purple);
+}
+
+.blackFont {
+    color: var(--secondary-colour-black);
+}
+
+.Purple {
+    background-color: var(--primary-colour-purple);
+}
+
+.alignLeft {
+    align-items: start;
+}
+
+.alignRight {
+    align-items: end;
+}
+
+.flexRow {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flexColumn {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea PM Portfolio</title>
+    <!-- Enlaces a CSS y JS -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/mouse.js" defer></script>
+    <!-- Enlace a favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Enlaces a tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+24&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- RATÓN -->
+    <!-- Clase del cursor que sustituye al cursor usual del usuario al navegar en esta web -->
+    <div class="Cursor">
+    </div>
+
+
+    <!-- Contenido general de la página - Menú principal -->
+    <Main class="Main">
+
+
+        <!-- GALERÍA DE PROYECTOS -->
+        <div class="Main-content projectGallery">
+
+            <h2 class="Main-h2">Project * Gallery</h2>
+
+            <!-- navegador de proyectos - selector de proyectos por tipo -->
+            <nav class="projectGallery-nav GalleryNav">
+                <ul class="GalleryNav-ul">
+                    <li class="GalleryNav-li isActive" id="All"> #00 - All Projects</li>
+                    <li class="GalleryNav-li" id="BrandIdentity"> #02 - Brand Identity</li>
+                    <li class="GalleryNav-li" id="Packaging"> #03 - Packaging</li>
+                    <li class="GalleryNav-li" id="PrintMedia"> #04 - Print Media</li>
+                    <li class="GalleryNav-li" id="MotionGraphics"> #05 - Motion Graphics</li>
+                </ul>
+            </nav>
+
+            <!-- Visualizador de proyectos -->
+            <!-- Cada proyecto es un artículo ya que son completamente independientes los unos de los otros -->
+            <!-- Cada uno tiene 3 tipos diferentes de clases. La primera, igual en todos los proyectos, que define el cómo se ve visualmente la caja contenedora. Las segundas(que pueden ser múltiples), que define qué tipo de proyecto es y gracias a la cual podemos filtrar mediante JS la clase de proyecto que queremos ver (Branding, illustration, etc). Y la última, isActive, que nos muestra los proyectos y la que se quitará o no dependiendo de qué botón cliquemos en el navegador de proyectos. -->
+            <div class="projectGallery-wrapper">
+
+                <article class="projectGallery-project Packaging Illustration printMedia isActive">
+                    <div class="projectGallery-imgContainer">
+                        <a href="project-tarot-nimbus.html" class="projectGallery-a"><img
+                                src="assets/01_nimbus_tarot/nimbustarotpreview.webp" alt="fotogaleria"
+                                class="projectGallery-img" loading="lazy"></a>
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3"> Nimbus Tarot</h3>
+                            <h4 class="projectGallery-h4">Printed Media * Packaging * Illustration</h4>
+                        </div>
+
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">Based on the TTRPG setting of the same name. Nimbus Tarot is a
+                                complete deck of 22 tarot cards depicting all the major arcana representing the
+                                symbology of the D&D world.</p>
+                            <a class="projectGallery-a " href="project-tarot-nimbus.html">See More ↳</a>
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+                <article class="projectGallery-project Packaging Illustration printMedia isActive">
+                    <div class="projectGallery-imgContainer">
+                        <a href="project-suiss-style-poster-collection.html" class="projectGallery-a"><img
+                                src="assets/03_Swiss_style_poster_collection/mockups1.webp" alt="fotogaleria"
+                                class="projectGallery-img" loading="lazy"></a>
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3"> Swiss Style Poster - Collection</h3>
+                            <h4 class="projectGallery-h4">Printed Media * Poster Design</h4>
+                        </div>
+
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">Minimalistic poster style and composition collection based on a series of award-winning international movies. </p>
+                            <a class="projectGallery-a " href="project-suiss-style-poster-collection.html">See More ↳</a>
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+                <article class="projectGallery-project brandIdentity isActive">
+                    <div class="projectGallery-imgContainer">
+                        <a href="project-business-cards.html" class="projectGallery-a"><img
+                                src="assets/05_business_cards/business_mockup (5).webp" alt="fotogaleria"
+                                class="projectGallery-img" loading="lazy"></a>
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3">Business Card - Portfolio</h3>
+                            <h4 class="projectGallery-h4">Brand Identity</h4>
+                        </div>
+
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">Personal exercise and exploration of different business card
+                                styles and compositions. As a challenge, a limited number of hours were given for 3
+                                days. Giving the following results of various artistic currents.</p>
+                            <a class="projectGallery-a " href="project-business-cards.html">See More ↳</a>
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+                <article class="projectGallery-project brandIdentity Packaging isActive ">
+                    <div class="projectGallery-imgContainer">
+                        <a href="project-my-own-anthology.html" class="projectGallery-a"><img
+                                src="assets/08_my_own_anthology_thunderdrop/mockup.webp" alt="fotogaleria"
+                                class="projectGallery-img" loading="lazy"></a>
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3">My Own Anthology - Thunderdrop</h3>
+                            <h4 class="projectGallery-h4">Brand Identity * Packaging * Illustration * Collage</h4>
+                        </div>
+
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">A special collaboration with the composer and musician
+                                Thunderdrop. A collection of different soundtracks showing his versatility and style
+                                throughout different genres. As such, a design for the entire album (CD, interiors,
+                                exteriors and booklet) was needed, showcasing this clash.</p>
+                            <a class="projectGallery-a " href="project-my-own-anthology.html">See More ↳</a>
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+                <article class="projectGallery-project printMedia Illustration isActive">
+                    <div class="projectGallery-imgContainer">
+                        <img src="assets/peter-mohrbacher-zachriel-last-witness-sm.jpg" alt="fotogaleria"
+                            class="projectGallery-img" loading="lazy">
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3">04 | Nimbus Bestiarius</h3>
+                            <h4 class="projectGallery-h4">Illustration * Editorial Design * Concept * Prototyping </h4>
+                        </div>
+
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">Nimbus Bestiarius is a mythological book, consisting on
+                                fragments of the original myths of the gods of Nimbus, a fictional world and D&D setting
+                                for a personal home game.</p>
+                            <a class="projectGallery-a " href="04_project_nimbus_bestiarius.html">See More ↳</a>
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+
+                <article class="projectGallery-project motionGraphics isActive">
+                    <div class="projectGallery-imgContainer">
+                        <a href="project-kda-motion-cover.html" class="projectGallery-a"><img
+                                src="assets/06_kda_motion_graphics/KDA.webp" alt="fotogaleria"
+                                class="projectGallery-img" loading="lazy"></a>
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3">K/DA - POP/STARS | Cover by Rain </h3>
+                            <h4 class="projectGallery-h4">Motion Graphics</h4>
+                        </div>
+
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">As a freelance project I was contacted to create a motion
+                                graphics lyric video for a cover of the song “POP/STARS“ by K/DA, performed by the
+                                singer RAIN</p>
+                            <a class="projectGallery-a " href="project-kda-motion-cover.html">See More ↳</a>
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+                <article class="projectGallery-project printMedia isActive">
+                    <div class="projectGallery-imgContainer">
+                        <a href="project-radiohead-albums-redesign.html" class="projectGallery-a"><img
+                                src="assets/07_radiohead_album_redesign/Portada+Behance.webp" alt="fotogaleria"
+                                class="projectGallery-img" loading="lazy"></a>
+                    </div>
+
+                    <div class="projectGallery-infoContainer">
+                        <div class="projectGallery-infoDivider dividerTitle">
+                            <h3 class="projectGallery-h3">Radiohead Album - Redesign </h3>
+                            <h4 class="projectGallery-h4">Concept * Graphic design</h4>
+                        </div>
+                        <div class="projectGallery-infoDivider dividerBody">
+                            <p class="projectGallery-p">
+                                Personal challenge consiting on the redesign of all Radiohead albums, using elements
+                                inspired by their original covers and music
+                            </p>
+                            <a class="projectGallery-a " href="project-radiohead-albums-redesign.html">See More ↳</a>
+                        </div>
+                    </div>
+
+                </article>
+
+
+            </div>
+        </div>
+
+
+        <!-- HOME BUTTON-->
+        <!-- El Home button es igual en todas las páginas de la web. Al clicar en éste se activa el JS, haciendo que el Header con el navegador aparezca por el lado izquierdo en formatos grandes, y en dispositivos pequeños, que aparezca por la parte de arriba-->
+        <!-- Al clicar de nuevo en el ojo el header se esconde -->
+        <div class="Main-homeButton homeButton isActive">
+            <img src="assets/logo-ojo.png" alt="logoweb" class="Main-logo eyeBlink" loading="lazy">
+        </div>
+
+
+        <!-- HEADER -->
+        <!-- El header al clicarse el botón de HOME aparece superpuesto sobre el MAIN, permitiendo navegar entre las diferentes páginas de la web -->
+        <!-- Contiene el H1, el navegador, las redes sociales y un par de pestañas laterales que indican en que parte de la web uno se encuentra, además de otros enlaces personales para mayor información y proyectos.  -->
+
+
+        <Header class="Main-header Header notActive ">
+            <div class="Header-presentation Presentation">
+                <img class="Main-logo Header-logo" src="assets/logo-ojo.png" alt="logoweb" loading="lazy">
+
+                <div class="Presentation-divider">
+                    <h1 class="Header-h1">Digital * Design</h1>
+                    <span class="Header-role">// Andrea Pallás Mateo // Brand design & Illustration //</span>
+
+                </div>
+
+
+
+                <div class="Header-wrapper">
+                    <nav class="Header-nav Tabs">
+                        <ul class="Tabs-ul">
+                            <li class="Tabs-li"><a href="index.html" class="Tabs-a isActive">Recent Projects</a></li>
+                            <li class="Tabs-li "><a href="gallery.html" class="Tabs-a">Project Gallery</a></li>
+                            <li class="Tabs-li"><a href="about.html" class="Tabs-a">About & Contact</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <div class="Header-rrss Rrss">
+
+                        <ul class="Rrss-ul">
+                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://www.instagram.com/saturni_idae/"><img
+                                        class="Rs-img" src="assets/instagram.svg" alt="instagram icon" loading="lazy"
+                                        target="_blank"></a></li>
+                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://x.com/saturni_idae"><img class="Rs-img"
+                                        src="assets/twitter.svg" alt="twitter icon" loading="lazy" target="_blank"></a>
+                            </li>
+                            <li class="Rrss-li Rs"><a class="Rs-a"
+                                    href="https://saturni-idae.carrd.co/?utm_source=ig&utm_medium=social&utm_content=link_in_bio"><img
+                                        class="Rs-img" src="assets/carrd.svg" alt="carrd icon" loading="lazy"
+                                        target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicadores laterales de las páginas que se están visitando. Su objetivo es principalmente decorativo, reminiscente de una agenda o un cuaderno de notas con números de teléfono.
+             Cada uno contiene un enlace a una página diferente de la web, además de un enlace externo a mi portafolio de ilustración -->
+            <div class="Header-markers Markers">
+                <ul class="Markers-ul">
+                    <!-- La clase isActive indica qué marcador está activado, indicando qué parte de la web se está visitando -->
+                    <li class="Markers-li isActive"><a href="index.html" class="Markers-a">Aa</a></li>
+                    <li class="Markers-li"><a href="gallery.html" class="Markers-a">Bb</a></li>
+                    <li class="Markers-li"><a href="about.html" class="Markers-a">Cc</a></li>
+                </ul>
+
+                <ul class="Markers-ul">
+                    <li class="Markers-li"> <a href="mailto:asanartworkshop@gmail.com"
+                            class="Markers-a">asanartworkshop@gmail.com</a>
+                        </a> </li>
+                </ul>
+
+                <ul class="Markers-ul">
+                    <li class="Markers-li"> <a href="https://saturni-idae-illustration.carrd.co/" class="Markers-a"
+                            target="_blank">Illustration Portfolio</a> </li>
+                </ul>
+            </div>
+
+
+
+        </Header>
+
+
+
+
+    </Main>
+
+
+</body>
+
+
+</html>

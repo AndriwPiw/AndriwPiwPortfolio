@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea PM Portfolio</title>
+    <!-- Enlaces a CSS y JS -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/mouse.js" defer></script>
+    <!-- Enlace a favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Enlaces a tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+24&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<!-- Este archivo HTML es la landing page del sitio web
+ Muestra los proyectos más recientes de mi portafolio personal
+ Contiene:
+ - Cursor 
+ - Main, donde se encuentran los proyectos
+ - Header, donde se encuentra la barra de navegación -->
+
+<body>
+
+    <!-- ////////////////////////////////////////////////////////////////////// -->
+    <!-- PROBLEMAS A SOLUCIONAR!!!!!!!!!!!! -->
+
+
+    <!-- ADD CARROUSEL -->
+
+
+
+    <!-- RESPUESTAS -->
+    <!-- etiquetas a cursor none -->
+    <!-- imaggen.src wehn click -->
+
+
+    <!-- problemas principales -->
+    <!-- quitar lo del ratón -->
+    <!-- orden de los archivos correcto, organización de las carpetas.mejor 
+ tenerlo en varios css y js diferentes ?-->
+
+
+    <!-- JS -->
+    <!-- Añadir para que se pueda seleccionar cada carta individualmente y aparezca en grande al lado! en el proyecto Nimbus Tarot -->
+    <!-- Añadir filtro para los proyectos de motion graphics en la galería principal -->
+
+
+    <!-- PROBLEMAS DE MAQUETACIÓN -->
+    <!-- AÑADE BIEN EL RESPONSIVE CRACK -->
+    <!-- Clases colocadas correctamente? Dudas con nombres más largos -->
+    <!-- Ratón cuando hover, se va el efecto del cursor -->
+    <!-- Loading page, scroll animation a página principal? -->
+    <!-- Acabar de colocar las galerías de fotos -->
+
+    <!-- RESPONSIVE -->
+    <!-- Quitar el ratón personalizado en x formatos -->
+
+    <!-- TRANSICIONES O EFECTOS EXTRA? -->
+    <!-- La loading page hacer que sea una animación introductoria, no un interactivo -->
+    <!-- Consejos para mejores transiciones entre páginas?? -->
+    <!-- En la landing page y cada proyecto individual cómo configurar correctamente el scroll animation -->
+
+    <!-- PROBLEMAS DE ESTILO -->
+    <!-- Agrupar los tamaños de los textos bajo las mismas variables para unificar -->
+    <!-- Fix decoración y colocar enlaces a las páginas
+           -->
+    <!-- Selectores laterales del header se activan según qué página esté activa -->
+
+
+    <!-- CUESTIONES GENERALES -->
+    <!-- Mover header fuera del main? Sería más correcto sintácticamente? -->
+
+
+    <!-- PROBLEMAS DE CONTENIDO -->
+    <!-- Cambiar el tamaño de las redes para que haya mejor accesibilidad, hacer lo mismo con el correo electrónico, colocar en header -->
+    <!-- Cambiar enlace al portafolio de ilustración -->
+
+    <!-- COMENTARIOS A AÑADIR O MODIFICAR -->
+    <!-- AÑADIR LOS COMENTARIOS Y ESTRUCTURA DEL JS Y CSS CON LA DESCRIPCIÓN DE CADA BLOQUE INDIVIDUAL Y ESTRUCTURA -->
+    <!-- Describir cada variante que creemos en js, y cada objeto -->
+    <!-- OPTIMIZAR EL JS -->
+
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- RATÓN -->
+    <!-- Clase del cursor que sustituye al cursor usual del usuario al navegar en esta web -->
+    <div class="Cursor">
+    </div>
+
+
+    <!-- MAIN Contenido general de la página -->
+    <!-- Contiene el Header por un lado, el contenido principal y la marquesina-->
+    <Main class="Main">
+
+        <!-- PROYECTOS RECIENTES -->
+        <!-- Ocupa todo el espacio disponible, con un scroll snap para ajustar cada proyecto por completo a la pantalla, mostrando los últimos proyectos -->
+        <div class="Main-content recentProjects">
+            <h2 class="Main-h2 ">Recent * Projects</h2>
+
+            <!-- Cada proyecto reciente es un article, ya que son indepentientes los unos de los otros -->
+            <!-- Cada article contiene un h3 con el título del proyecto, el número, un breve resumen, y la imagen más representativa del mismo. Para acceder al proyecto puede clicarse tanto en el título del mismo como en la imagen de portada -->
+            <article class="recentProjects-project">
+                <div class="recentProjects-info">
+                    <span class="recentProjects-number"> .01</span>
+                    <h3 class="recentProjects-h3"> <a href="project-tarot-nimbus.html"
+                            class="recentProjects-a">Nimbus Tarot</a>
+                    </h3>
+                    <span class="recentProjects-span">Printed Media * Packaging * Illustration</span>
+                    <p class="recentProjects-p">Based on the TTRPG setting of the same name. Nimbus Tarot is a complete
+                        deck of 22 tarot cards depicting all the major arcana representing the symbology of the D&D
+                        world.
+                    </p>
+                </div>
+
+                <div class="recentProjects-images">
+                    <a href="project-tarot-nimbus.html" class="recentProjects-link"> <img
+                            src="assets/01_nimbus_tarot/nimbustarotpreview.webp" alt="nimbus tarot preview"
+                            class="recentProjects-preview"></a>
+                </div>
+
+
+            </article>
+
+            <article class="recentProjects-project">
+                <div class="recentProjects-info">
+                    <span class="recentProjects-number"> .02</span>
+                    <h3 class="recentProjects-h3"> <a href="project-my-own-anthology.html" class="recentProjects-a">My Own Anthology - CD Design</a>
+                    </h3>
+                    <span class="recentProjects-span">Branding * Collage * Illustration * Packaging </span>
+                    <p class="recentProjects-p">
+                        A special collaboration with the composer and musician Thunderdrop.
+                        A collection of different soundtracks showing his versatility and style throughout different
+                        genres. As such, a design for the entire album (CD, interiors, exteriors and booklet) was
+                        needed, showcasing this clash.
+                    </p>
+                </div>
+
+                <div class="recentProjects-images">
+                    <a href="project-my-own-anthology.html" class="recentProjects-link"> <img
+                            src="assets/08_my_own_anthology_thunderdrop/mockup.webp" alt="my own anthology cd preview"
+                            class="recentProjects-preview" loading="lazy"></a>
+
+                </div>
+
+
+            </article>
+
+
+            <article class="recentProjects-project">
+                <div class="recentProjects-info">
+                    <span class="recentProjects-number"> .03</span>
+                    <h3 class="recentProjects-h3"> <a href="project-suiss-style-poster-collection.html"
+                            class="recentProjects-a">Swiss Style Poster - Collection</a>
+                    </h3>
+                    <span class="recentProjects-span">Printed Media * Poster design</span>
+                    <p class="recentProjects-p">
+                        Minimalistic poster style and composition collection based on a series of award-winning
+                        international movies.
+                    </p>
+                </div>
+
+                <div class="recentProjects-images">
+                    <a href="project-suiss-style-poster-collection.html" class="recentProjects-link"> <img
+                            src="assets/03_Swiss_style_poster_collection/mockups1.webp" alt="swiss poster preview"
+                            class="recentProjects-preview" loading="lazy"></a>
+
+                </div>
+
+
+            </article>
+
+        </div>
+
+
+        <!-- <div class="Main-marquee Marquee">
+        </div> -->
+
+
+        <!-- HOME BUTTON-->
+        <!-- El Home button es igual en todas las páginas de la web. Al clicar en éste se activa el JS, haciendo que el Header con el navegador aparezca por el lado izquierdo en formatos grandes, y en dispositivos pequeños, que aparezca por la parte de arriba-->
+        <!-- Al clic nuevo en el ojo el header se esconde -->
+        <div class="Main-homeButton homeButton isActive">
+            <img src="assets/logo-ojo.png" alt="logoweb" class="Main-logo eyeBlink" loading="lazy">
+        </div>
+        <!-- Lo único que cambia en esta home es el texto "Don't click my eye" como forma de que el visitante de la página clique en el icono para mostrar el header y que pueda navegar de un lado a otro -->
+        <span class="Main-span Clickeye"> Don't click my eye! </span>
+
+
+        <!-- HEADER -->
+        <!-- El header al clicarse el botón de HOME aparece superpuesto sobre el MAIN, permitiendo navegar entre las diferentes páginas de la web -->
+        <!-- Contiene el H1, el navegador, las redes sociales y un par de pestañas laterales que indican en que parte de la web uno se encuentra, además de otros enlaces personales para mayor información y proyectos.  -->
+
+        <!-- El header tiene la clase notActive por defecto. Ésta esconde el header hasta que el home button es pulsado, cambiándola por la clase isActive -->
+        <Header class="Main-header Header  notActive">
+            <div class="Header-presentation Presentation">
+                <img class="Main-logo Header-logo" src="assets/logo-ojo.png" alt="logoweb" loading="lazy">
+
+                <div class="Presentation-divider">
+                    <h1 class="Header-h1">Digital * Design</h1>
+                    <span class="Header-role">// Andrea Pallás Mateo // Brand design & Illustration //</span>
+
+                </div>
+
+
+
+                <div class="Header-wrapper">
+                    <nav class="Header-nav Tabs">
+                        <ul class="Tabs-ul">
+                            <li class="Tabs-li"><a href="index.html" class="Tabs-a isActive">Recent Projects</a></li>
+                            <li class="Tabs-li "><a href="gallery.html" class="Tabs-a">Project Gallery</a></li>
+                            <li class="Tabs-li"><a href="about.html" class="Tabs-a">About & Contact</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <div class="Header-rrss Rrss">
+
+                        <ul class="Rrss-ul">
+                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://www.instagram.com/saturni_idae/"><img
+                                        class="Rs-img" src="assets/instagram.svg" alt="instagram icon" loading="lazy"
+                                        target="_blank"></a></li>
+                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://x.com/saturni_idae"><img class="Rs-img"
+                                        src="assets/twitter.svg" alt="twitter icon" loading="lazy" target="_blank"></a>
+                            </li>
+                            <li class="Rrss-li Rs"><a class="Rs-a"
+                                    href="https://saturni-idae.carrd.co/?utm_source=ig&utm_medium=social&utm_content=link_in_bio"><img
+                                        class="Rs-img" src="assets/carrd.svg" alt="carrd icon" loading="lazy"
+                                        target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicadores laterales de las páginas que se están visitando. Su objetivo es principalmente decorativo, reminiscente de una agenda o un cuaderno de notas con números de teléfono.
+             Cada uno contiene un enlace a una página diferente de la web, además de un enlace externo a mi portafolio de ilustración -->
+            <div class="Header-markers Markers">
+                <ul class="Markers-ul">
+                    <!-- La clase isActive indica qué marcador está activado, indicando qué parte de la web se está visitando -->
+                    <li class="Markers-li isActive"><a href="index.html" class="Markers-a">Aa</a></li>
+                    <li class="Markers-li"><a href="gallery.html" class="Markers-a">Bb</a></li>
+                    <li class="Markers-li"><a href="about.html" class="Markers-a">Cc</a></li>
+                </ul>
+
+                <ul class="Markers-ul">
+                    <li class="Markers-li"> <a href="mailto:asanartworkshop@gmail.com"
+                            class="Markers-a">asanartworkshop@gmail.com</a>
+                        </a> </li>
+                </ul>
+
+                <ul class="Markers-ul">
+                    <li class="Markers-li"> <a href="https://saturni-idae-illustration.carrd.co/" class="Markers-a"
+                            target="_blank">Illustration Portfolio</a> </li>
+                </ul>
+            </div>
+
+
+
+        </Header>
+
+
+    </Main>
+
+
+
+    <!-- Pantalla previa, div porque tiene poca importancia semántica - Página transitoria-->
+    <!--   Click para activar la clase isClicked y pasar al contenido principal de la página -->
+    <!-- <div class="Pre-load">
+            <span class="Pre-load-span jacquard-12-regular">Portfolio</span>
+            <button class="Pre-load--click">Click here to continue</button>
+
+            <div class="Pre-load--loading">
+                <span class="Loading-span">
+                    Now loading...
+                </span>
+                <div class="Loading-bar">
+                    <div class="Loading-fill"></div>
+                </div>
+            </div>
+    
+        </div> -->
+
+</body>
+
+
+</html>ar de

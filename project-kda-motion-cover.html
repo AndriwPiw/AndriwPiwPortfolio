@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea PM Portfolio</title>
+    <!-- Enlaces a CSS y JS -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/mouse.js" defer></script>
+    <script src="js/cardSelector.js" defer></script>
+    <!-- Enlace a favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Enlaces a tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+24&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+
+    <!-- RATÓN -->
+    <div class="Cursor">
+    </div>
+
+
+    <!-- Contenido general de la página - Menú principal -->
+    <Main class="Main">
+
+        <!-- PROYECTO INDIVIDUAL V1-->
+        <div class="Main-content Project">
+
+
+
+            <div class="Project-columnWrapper ">
+                <div class="Project-column">
+                    <header class="Project-header">
+                        <span class="Project-span">Motion Graphics * Video Editing </span>
+                        <h2 class="Project-h2"> K/DA - POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns) | Cover
+                            by Rain</h2>
+                        <h3 class="Project-h3 purpleFont">Motion graphics - Lyric video</h3>
+                    </header>
+
+                    <div class="Project-body">
+                        <p class="Project-p">As a freelance project I was contacted to create a motion graphics lyric
+                            video for a cover of the song “POP/STARS“ by K/DA.
+                            I collaborated closely with the performer, Rain, while the cover was being finalised.
+                            The objective was to evocate the aesthetic, iconography and general style of the original
+                            music video.</p>
+
+                    </div>
+
+                </div>
+                <div class="Project-column ">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xX83fLHwbSk?si=thAll-4taj_4DxCT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- HOME BUTTON-->
+        <!-- El Home button es igual en todas las páginas de la web. Al clicar en éste se activa el JS, haciendo que el Header con el navegador aparezca por el lado izquierdo en formatos grandes, y en dispositivos pequeños, que aparezca por la parte de arriba-->
+        <!-- Al clicar de nuevo en el ojo el header se esconde -->
+        <div class="Main-homeButton homeButton isActive">
+            <img src="assets/logo-ojo.png" alt="logoweb" class="Main-logo eyeBlink" loading="lazy">
+        </div>
+
+
+        <!-- HEADER -->
+        <!-- El header al clicarse el botón de HOME aparece superpuesto sobre el MAIN, permitiendo navegar entre las diferentes páginas de la web -->
+        <!-- Contiene el H1, el navegador, las redes sociales y un par de pestañas laterales que indican en que parte de la web uno se encuentra, además de otros enlaces personales para mayor información y proyectos.  -->
+
+        <Header class="Main-header Header notActive ">
+            <div class="Header-presentation Presentation">
+                <img class="Main-logo Header-logo" src="assets/logo-ojo.png" alt="logoweb" loading="lazy">
+
+                <div class="Presentation-divider">
+                    <h1 class="Header-h1">Digital * Design</h1>
+                    <span class="Header-role">// Andrea Pallás Mateo // Brand design & Illustration //</span>
+
+                </div>
+
+
+
+                <div class="Header-wrapper">
+                    <nav class="Header-nav Tabs">
+                        <ul class="Tabs-ul">
+                            <li class="Tabs-li"><a href="index.html" class="Tabs-a isActive">Recent Projects</a></li>
+                            <li class="Tabs-li "><a href="gallery.html" class="Tabs-a">Project Gallery</a></li>
+                            <li class="Tabs-li"><a href="about.html" class="Tabs-a">About & Contact</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <div class="Header-rrss Rrss">
+
+                        <ul class="Rrss-ul">
+                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://www.instagram.com/saturni_idae/"><img
+                                        class="Rs-img" src="assets/instagram.svg" alt="instagram icon" loading="lazy"
+                                        target="_blank"></a></li>
+                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://x.com/saturni_idae"><img class="Rs-img"
+                                        src="assets/twitter.svg" alt="twitter icon" loading="lazy" target="_blank"></a>
+                            </li>
+                            <li class="Rrss-li Rs"><a class="Rs-a"
+                                    href="https://saturni-idae.carrd.co/?utm_source=ig&utm_medium=social&utm_content=link_in_bio"><img
+                                        class="Rs-img" src="assets/carrd.svg" alt="carrd icon" loading="lazy"
+                                        target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicadores laterales de las páginas que se están visitando. Su objetivo es principalmente decorativo, reminiscente de una agenda o un cuaderno de notas con números de teléfono.
+             Cada uno contiene un enlace a una página diferente de la web, además de un enlace externo a mi portafolio de ilustración -->
+            <div class="Header-markers Markers">
+                <ul class="Markers-ul">
+                    <!-- La clase isActive indica qué marcador está activado, indicando qué parte de la web se está visitando -->
+                    <li class="Markers-li isActive"><a href="index.html" class="Markers-a">Aa</a></li>
+                    <li class="Markers-li"><a href="gallery.html" class="Markers-a">Bb</a></li>
+                    <li class="Markers-li"><a href="about.html" class="Markers-a">Cc</a></li>
+                </ul>
+
+                <ul class="Markers-ul">
+                    <li class="Markers-li"> <a href="mailto:asanartworkshop@gmail.com"
+                            class="Markers-a">asanartworkshop@gmail.com</a>
+                        </a> </li>
+                </ul>
+
+                <ul class="Markers-ul">
+                    <li class="Markers-li"> <a href="https://saturni-idae-illustration.carrd.co/" class="Markers-a"
+                            target="_blank">Illustration Portfolio</a> </li>
+                </ul>
+            </div>
+
+
+
+        </Header>
+
+
+
+
+
+    </Main>
+
+
+
+</body>
+
+
+</html>
