@@ -1,8 +1,6 @@
 `use strict`
 
 
-
-
 const cardViewer = document.querySelector(`.cardViewer`)
 const cardViewerImgFront = cardViewer.querySelector('.cardViewer-img--front')
 let projectImgs = document.querySelectorAll(`.Project-img`)
@@ -15,7 +13,6 @@ projectImgs.forEach((img) => {
 
 
     })
-
 
     projectImgs.forEach((_, index) => {
         projectImgs[index].addEventListener(`click`, () => {

@@ -141,7 +141,7 @@ html {
 /* ENLAZAMOS LA TIPOGRAFÍA VARIABLE */
 .montserrat-variable {
     font-family: "Montserrat", sans-serif;
-    font-weight: 2rem;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -596,7 +596,7 @@ background-color: var(--secondary-colour-black);
 
 
 /* MAIN CONTENT*/
-.Main-content {}
+
 
 .Main-h2 {
     color: var(--primary-colour-purple);
@@ -760,7 +760,7 @@ img.recentProjects-preview {
 
 
 /* navegador de contenido de la galería de proyectos */
-.projectGallery-nav {}
+
 
 .GalleryNav {
     position: fixed;
@@ -1356,7 +1356,7 @@ img.recentProjects-preview {
     align-items: end;
 }
 
-.About-listWrapper {}
+
 
 .About-clip {
     max-width: 60px;
@@ -1582,7 +1582,7 @@ mark {
 @media (max-width:1000px) {
 
     /* MAIN CONTENT */
-    .Main-content {}
+
 
     /* HEADER */
     .Main-header {
@@ -1610,7 +1610,7 @@ mark {
 
 
 
-    .Main-logo {}
+   
 
 
     .Header-presentation {
@@ -1646,7 +1646,7 @@ mark {
         flex-flow: column nowrap;
     }
 
-    .Tabs-li {}
+    
 
     .Tabs-a {
         font-size: 3em;
@@ -1695,7 +1695,7 @@ mark {
         justify-content: start;
     }
 
-    .recentProjects-images {}
+   
 
 
     .Main-marquee {

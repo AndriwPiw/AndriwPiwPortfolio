@@ -13,7 +13,6 @@ const buttonLeft = document.querySelector(`.Carrousel-button--left`)
 const buttonRight = document.querySelector(`.Carrousel-button--right`)
 
 
-
 // Definimos un contador, la imagen por la que empezará el carrousel
 let counter = 0
 
@@ -40,7 +39,7 @@ buttonRight.addEventListener(`click`, () => {
     if (counter === numImgs) {
         counter = 0
     }
-    // Movemos el carrousel
+    // Movemos el carrousel con la función moveCarrousel que hemos definido más arriba
     moveCarrousel()
 
    
