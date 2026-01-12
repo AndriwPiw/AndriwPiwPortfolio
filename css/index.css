@@ -853,9 +853,15 @@ img.recentProjects-preview {
 
 
 .projectGallery-imgContainer {
-    min-height: 60%;
+    min-height: 30rem;
     max-height: 30rem;
     overflow: hidden;
+
+    transition: all .5s ease;
+}
+
+.projectGallery-imgContainer:hover{
+    opacity: 0.5;
 }
 
 .projectGallery-img {
@@ -866,7 +872,7 @@ img.recentProjects-preview {
 
 
 .projectGallery-infoContainer {
-    min-height: 35%;
+    /* min-height: 35%; */
     padding: 1.25em;
 
     display: flex;
