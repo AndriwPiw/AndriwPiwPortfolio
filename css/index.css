@@ -1547,12 +1547,20 @@ mark {
     }
 
     .card.isActive {
-    opacity: 100%;
+        opacity: 100%;
     }
 
     /* ABOUT */
 
     .About-bigClue {
+        display: none;
+    }
+
+    .About-idPhoto {
+        display: none;
+    }
+
+    .About-clip {
         display: none;
     }
 
@@ -1771,13 +1779,8 @@ mark {
         display: none;
     }
 
-    .About-idPhoto {
-        display: none;
-    }
 
-    .About-clip {
-        display: none;
-    }
+
 
 
 }
@@ -1793,12 +1796,14 @@ mark {
         min-height: 50%;
     }
 
-     .Project-gallery {
+    .Project-gallery {
         grid-template-columns: repeat(1, 1fr);
     }
-     .Project-gallery--small {
+
+    .Project-gallery--small {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .Project-gallery--usmall {
         grid-template-columns: repeat(1, 1fr);
     }
