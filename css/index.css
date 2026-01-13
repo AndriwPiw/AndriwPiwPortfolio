@@ -628,6 +628,7 @@ background-color: var(--secondary-colour-black);
 
 
 .recentProjects-project {
+    background-color: aqua;
     min-height: 100vh;
     padding-left: 25vh;
 
@@ -859,7 +860,7 @@ img.recentProjects-preview {
     transition: all .5s ease;
 }
 
-.projectGallery-imgContainer:hover{
+.projectGallery-imgContainer:hover {
     opacity: 0.5;
 }
 
@@ -1151,12 +1152,10 @@ img.recentProjects-preview {
 /* Bloques de contenido */
 .Project-block {
     margin-bottom: 1rem;
-
-
 }
 
 .Block {
-   
+
     min-width: 100%;
     max-height: 50rem;
 
@@ -1165,11 +1164,11 @@ img.recentProjects-preview {
 
 .Block--columns {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .Block-img {
-   
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1185,6 +1184,7 @@ img.recentProjects-preview {
 }
 
 .Project-li {
+    font-family: var(--font-family-space-mono);
     list-style-type: disc;
 }
 
@@ -1314,7 +1314,7 @@ img.recentProjects-preview {
     background-color: var(--secondary-colour-white);
     width: 100%;
     min-height: 100vh;
-    
+
 
     display: flex;
     flex-flow: row nowrap;
@@ -1608,7 +1608,7 @@ mark {
 
 
 
-   
+
 
 
     .Header-presentation {
@@ -1644,7 +1644,7 @@ mark {
         flex-flow: column nowrap;
     }
 
-    
+
 
     .Tabs-a {
         font-size: 3em;
@@ -1675,6 +1675,10 @@ mark {
         scroll-snap-type: y proximity;
     }
 
+    .recentProjects-number {
+        font-size: 3em;
+    }
+
     .recentProjects-project {
         padding-left: 0px;
         flex-flow: column-reverse nowrap;
@@ -1693,7 +1697,7 @@ mark {
         justify-content: start;
     }
 
-   
+
 
 
     .Main-marquee {
@@ -1739,7 +1743,7 @@ mark {
         max-height: 60vh;
     }
 
-    .Project-carrousel{
+    .Project-carrousel {
         max-width: 100vh;
         min-width: 100%;
 
@@ -1780,26 +1784,59 @@ mark {
 @media (max-width:900px) {
 
 
+
+    /* PROYECTO V1 */
+    .recentProjects-images {
+        min-height: 50%;
+    }
+
     /* GALERÍA DE PROYECTOS */
     .projectGallery-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
+/* 700px */
+@media (max-width:700px) {
+    .Block--columns {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
+    .Project-ul {
+        padding-left: 1rem;
+
+    }
+}
 
 /* 550px */
 @media (max-width:550px) {
 
+
+    /* Tamaño texto encabezado h3 */
+    .recentProjects-h3 {
+        font-size: 2em;
+    }
+
+
+    /* RECENT PROJECTS */
     .recentProjects-info {
         min-height: 60%;
     }
+
 
     /* GALERÍA DE PROYECTOS */
     .projectGallery-project {
         margin-bottom: 2rem;
     }
 
+    .projectGallery-imgContainer {
+        max-height: 40vh;
+    }
+
+    /* PROYECTO V1 */
+    .Project-h2{
+        font-size: 3em;
+    }
 
 }
 
