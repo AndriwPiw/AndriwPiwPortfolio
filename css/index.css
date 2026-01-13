@@ -628,7 +628,6 @@ background-color: var(--secondary-colour-black);
 
 
 .recentProjects-project {
-    background-color: aqua;
     min-height: 100vh;
     padding-left: 25vh;
 
@@ -1547,6 +1546,10 @@ mark {
         display: none;
     }
 
+    .card.isActive {
+    opacity: 100%;
+    }
+
     /* ABOUT */
 
     .About-bigClue {
@@ -1790,6 +1793,16 @@ mark {
         min-height: 50%;
     }
 
+     .Project-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+     .Project-gallery--small {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Project-gallery--usmall {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     /* GALERÍA DE PROYECTOS */
     .projectGallery-wrapper {
         grid-template-columns: repeat(1, 1fr);
@@ -1834,7 +1847,7 @@ mark {
     }
 
     /* PROYECTO V1 */
-    .Project-h2{
+    .Project-h2 {
         font-size: 3em;
     }
 
