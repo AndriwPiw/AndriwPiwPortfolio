@@ -110,8 +110,7 @@ a {
 img,
 svg,
 picture,
-video,
-iframe {
+video {
     display: block;
     max-width: 100%;
     width: 100%;
@@ -1315,7 +1314,7 @@ img.recentProjects-preview {
     background-color: var(--secondary-colour-white);
     width: 100%;
     min-height: 100vh;
-    max-height: 100vh;
+    
 
     display: flex;
     flex-flow: row nowrap;
@@ -1349,7 +1348,6 @@ img.recentProjects-preview {
 
 .About-textWrapper {
     position: relative;
-    padding-top: 5rem;
 
     display: flex;
     flex-flow: column nowrap;
@@ -1753,7 +1751,7 @@ mark {
 
 
 
-    /* ABOUT */
+    /* ABOUT 1000px*/
     .About {
         padding: 0vh;
     }
