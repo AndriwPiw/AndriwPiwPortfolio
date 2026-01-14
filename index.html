@@ -8,20 +8,20 @@
 
     <meta name="author" content="Andrea PM">
     <meta name="keywords" content="Graphic Design, Portfolio, Branding, Illustration, Printed Media, Packaging">
-    <meta name="description" content="Graphic design porfolio by Andrea PM. Designer specialized in branding and illustration" >
-    
+    <meta name="description"
+        content="Graphic design porfolio by Andrea PM. Designer specialized in branding and illustration">
+
 
     <!-- Enlaces a CSS y JS -->
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js" defer></script>
-    <script src="js/mouse.js" defer></script>
 
     <!-- Enlace a favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
 
     <!-- Enlaces a tipografías-->
-     <!-- Space Grotesk y Space Mono -->
+    <!-- Space Grotesk y Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,80 +29,105 @@
         rel="stylesheet">
 
 
-
 </head>
 
 <!-- COMENTARIOS GENERALES DEL PROYECTO -->
 <!-- Este archivo HTML es la landing page del sitio web
- Muestra los proyectos más recientes de mi portafolio personal
- Contiene: 
- - Main, donde se encuentran los proyectos
-    - Artículos -> que son cada proyecto individual
- - Header, donde se encuentra la barra de navegación + info general sobre mí -->
+ Muestra los proyectos más recientes de mi portafolio personal -->
 
 <!-- COMENTARIOS A AÑADIR-->
 <!-- Github Copilot fue agregado al proyecto durante las clases del módulo.
  Ha sido utilizado en el proyecto principalmente para añadir los mismos bloques repetidos, cambiando los contenidos de las imágenes principalmente. 
- el código que es reiterado -->
+ el código que es reiterado y para crear el índice de la estructura general de los documentos comentada al comienzo de cada archivo -->
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////// -->
+<!-- ESTRUCTURA DEL DOCUMENTO index.html -->
+<!-- 
+    - Main
+        - recentProjects
+            - article recentProjects-project (x3)
+                - recentProjects-info
+                    - recentProjects-number
+                    - recentProjects-h3
+                        - recentProjects-a
+                    - recentProjects-span
+                    - recentProjects-p
+                - recentProjects-images
+                    - recentProjects-link
+                        - recentProjects-preview
+        - Main-homeButton
+            - Main-logo
+        - Main-span
+    
+    - Header
+        - Header-presentation
+            - Main-logo Header-logo
+            - Presentation-divider
+                - Header-h1
+                - Header-role
+            - Header-wrapper
+                - Header-nav Tabs
+                    - Tabs-ul
+                        - Tabs-li (x3)
+                            - Tabs-a
+                - Header-rrss Rrss
+                    - Rrss-ul
+                        - Rrss-li Rs (x3)
+                            - Rs-a
+                                - Rs-img
+        - Header-markers Markers
+            - Markers-ul (x3)
+                - Markers-li (x3)
+                    - Markers-a
+     -->
+
+<!-- ////////////////////////////////////////////////////////////////////// -->
+
 
 <body>
 
-    <!-- ////////////////////////////////////////////////////////////////////// -->
     <!-- PROBLEMAS A SOLUCIONAR!!!!!!!!!!!! -->
-
-
     <!-- PROBLEMAS GENERALES -->
     <!-- back and forward button?? para poder cambiar más fácilmente de proyecto a proyecto -->
 
 
-
-
-
     <!-- RESPONSIVE -->
-    <!-- revisar los tamaños de los textos en móvil , reducir títulos-->
     <!-- en responsive asegurarme que en formato movil las columnas tengan de máximo 100% ancho -->
+
 
     <!-- TRANSICIONES O EFECTOS EXTRA? -->
     <!-- La loading page hacer que sea una animación introductoria, no un interactivo -->
 
 
-    <!-- PROBLEMAS DE ESTILO -->
-    <!-- Agrupar los tamaños de los textos bajo las mismas variables para unificar -->
-  
-
-    <!-- Reorganizar las clases de css y comentar adecuadamente -->
 
 
     <!-- CUESTIONES GENERALES -->
-    <!-- poner TODOS los colores con un custom properties OBLIGATORIO -->
+
     <!-- añadir la etiqueta picture + source a TODAS LAS IMÁGENES  -->
     <!-- colocar symbol en algún lado???  -->
 
     <!-- COMENTARIOS A AÑADIR O MODIFICAR -->
-    <!-- revisar la guía y comentar correctamente todo -->
-    <!-- quitar el parentesis en nnombres de las imagenes o dará problemas-->
-
+    <!-- comentar html -->
+    <!-- Comentar js -->
     <!-- Javascript, colocar HANDLER y optimizar -->
-    <!-- tipografía muy pequeña en el INDEX?, revisar, posiblemente en el header -->
     <!-- añadir symbols  -->
     <!-- uso de IIFE DE JAVASCRIPT -->
-     <!-- en about, ajustar la altura maxima de las contenedoras, poner un porcentaje -->
-      <!-- en el about ajustar el tamaño de la foto, poner por debajo? -->
+
 
 
 
     <!-- NOTAS DE CLASE -->
-    <!-- fill para cambiar color svg -->
     <!--  meter picture y source para las imágenes-->
     <!-- no usar tanto transition all, ajustar solo a las animaciones adecuadas -->
-    <!-- font size 10428 del index, tipografia muy pequeña perdida -->
 
 
     <!-- //////////////////////////////////////////////////////////////////////// -->
 
 
     <!-- MAIN Contenido general de la página -->
-    <!-- Contiene el Header por un lado, el contenido principal y la marquesina-->
+    <!-- Contiene el Header por un lado y el contenido principal (Main content) por otro-->
     <Main class="Main">
 
         <!-- PROYECTOS RECIENTES -->
@@ -112,10 +137,13 @@
 
             <!-- Cada proyecto reciente es un article, ya que son indepentientes los unos de los otros -->
             <!-- Cada article contiene un h3 con el título del proyecto, el número, un breve resumen, y la imagen más representativa del mismo. Para acceder al proyecto puede clicarse tanto en el título del mismo como en la imagen de portada -->
+
+            <!-- Proyecto reciente 1 -->
             <article class="recentProjects-project">
                 <div class="recentProjects-info">
                     <span class="recentProjects-number"> .01</span>
-                    <h3 class="recentProjects-h3"> <a title="Nimbus Tarot Project image" href="project-tarot-nimbus.html" class="recentProjects-a">Nimbus
+                    <h3 class="recentProjects-h3"> <a title="Nimbus Tarot Project image"
+                            href="project-tarot-nimbus.html" class="recentProjects-a">Nimbus
                             Tarot</a>
                     </h3>
                     <span class="recentProjects-span">Printed Media * Packaging * Illustration</span>
@@ -134,10 +162,12 @@
 
             </article>
 
+            <!-- Proyecto reciente 2 -->
             <article class="recentProjects-project">
                 <div class="recentProjects-info">
                     <span class="recentProjects-number"> .02</span>
-                    <h3 class="recentProjects-h3"> <a title="Anthology Project image" href="project-my-own-anthology.html" class="recentProjects-a">My
+                    <h3 class="recentProjects-h3"> <a title="Anthology Project image"
+                            href="project-my-own-anthology.html" class="recentProjects-a">My
                             Own Anthology - CD Design</a>
                     </h3>
                     <span class="recentProjects-span">Branding * Collage * Illustration * Packaging </span>
@@ -158,12 +188,13 @@
 
             </article>
 
-
+            <!-- Proyecto reciente 3 -->
             <article class="recentProjects-project">
                 <div class="recentProjects-info">
                     <span class="recentProjects-number"> .03</span>
-                    <h3 class="recentProjects-h3"> <a title="Posters project image" href="project-suiss-style-poster-collection.html"
-                            class="recentProjects-a">Swiss Style Poster - Collection</a>
+                    <h3 class="recentProjects-h3"> <a title="Posters project image"
+                            href="project-suiss-style-poster-collection.html" class="recentProjects-a">Swiss Style
+                            Poster - Collection</a>
                     </h3>
                     <span class="recentProjects-span">Printed Media * Poster design</span>
                     <p class="recentProjects-p">
@@ -173,9 +204,9 @@
                 </div>
 
                 <div class="recentProjects-images">
-                    <a title="posters project link" href="project-suiss-style-poster-collection.html" class="recentProjects-link"> <img
-                            src="assets/03_Swiss_style_poster_collection/mockups1.webp" alt="swiss poster preview"
-                            class="recentProjects-preview" loading="lazy"></a>
+                    <a title="posters project link" href="project-suiss-style-poster-collection.html"
+                        class="recentProjects-link"> <img src="assets/03_Swiss_style_poster_collection/mockups1.webp"
+                            alt="swiss poster preview" class="recentProjects-preview" loading="lazy"></a>
 
                 </div>
 
@@ -212,25 +243,30 @@
                 </div>
 
 
-
+                <!-- Navegador entre páginas -->
                 <div class="Header-wrapper">
                     <nav class="Header-nav Tabs">
                         <ul class="Tabs-ul">
-                            <li class="Tabs-li"><a title="Recent Projects"  href="index.html" class="Tabs-a isActive">Recent Projects</a></li>
-                            <li class="Tabs-li "><a title="Project Gallery"  href="gallery.html" class="Tabs-a">Project Gallery</a></li>
-                            <li class="Tabs-li"><a title="About and Contact" href="about.html" class="Tabs-a">About & Contact</a></li>
+                            <li class="Tabs-li"><a title="Recent Projects" href="index.html"
+                                    class="Tabs-a isActive">Recent Projects</a></li>
+                            <li class="Tabs-li "><a title="Project Gallery" href="gallery.html" class="Tabs-a">Project
+                                    Gallery</a></li>
+                            <li class="Tabs-li"><a title="About and Contact" href="about.html" class="Tabs-a">About &
+                                    Contact</a></li>
                         </ul>
                     </nav>
 
 
+                    <!-- Redes sociales -->
                     <div class="Header-rrss Rrss">
 
                         <ul class="Rrss-ul">
-                            <li class="Rrss-li Rs"><a title="instagram link"  target="_blank" class="Rs-a" href="https://www.instagram.com/saturni_idae/"><img
-                                        class="Rs-img" src="assets/instagram.svg" alt="instagram icon"
-                                        loading="lazy"></a></li>
-                            <li class="Rrss-li Rs"><a title="twitter link" target="_blank" class="Rs-a" href="https://x.com/saturni_idae"><img class="Rs-img"
-                                        src="assets/twitter.svg" alt="twitter icon" loading="lazy"></a>
+                            <li class="Rrss-li Rs"><a title="instagram link" target="_blank" class="Rs-a"
+                                    href="https://www.instagram.com/saturni_idae/"><img class="Rs-img"
+                                        src="assets/instagram.svg" alt="instagram icon" loading="lazy"></a></li>
+                            <li class="Rrss-li Rs"><a title="twitter link" target="_blank" class="Rs-a"
+                                    href="https://x.com/saturni_idae"><img class="Rs-img" src="assets/twitter.svg"
+                                        alt="twitter icon" loading="lazy"></a>
                             </li>
                             <li class="Rrss-li Rs"><a title="carrd link" target="_blank" class="Rs-a"
                                     href="https://saturni-idae.carrd.co/?utm_source=ig&utm_medium=social&utm_content=link_in_bio"><img
@@ -257,8 +293,9 @@
                 </ul>
 
                 <ul class="Markers-ul">
-                    <li class="Markers-li"> <a title="illustration portfolio" href="https://saturni-idae-illustration.carrd.co/" class="Markers-a"
-                            target="_blank" rel="noreferrer">Illustration Portfolio</a> </li>
+                    <li class="Markers-li"> <a title="illustration portfolio"
+                            href="https://saturni-idae-illustration.carrd.co/" class="Markers-a" target="_blank"
+                            rel="noreferrer">Illustration Portfolio</a> </li>
                 </ul>
             </div>
 

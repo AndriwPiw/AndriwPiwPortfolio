@@ -67,12 +67,17 @@ UTILIDADES
 
     /* CUSTOM PROPERTIES */
     /* Colores */
+
     /* Color principal-acento */
     --primary-colour-purple : rgb(110, 48, 209);
+
     /* Colores secundarios */
     --secondary-colour-black: rgb(0, 0, 0);
     --secondary-colour-white: white;
     --secondary-colour-grey: rgb(221, 221, 221);
+
+    /* Colores de acento */
+    --secondary-colour-yellow: rgb(255, 243, 135) ;
 
     /* Tipografía */
     /* Tipografía principal */
@@ -1143,7 +1148,7 @@ En un caso futuro en el que más proyectos tuvieran un apartado de gama cromáti
 
 .Carrousel-button {
     height: 100%;
-    color: aliceblue;
+    color: var(--secondary-colour-white);
     width: 3.125rem;
 }
 
@@ -1282,7 +1287,7 @@ En un caso futuro en el que más proyectos tuvieran un apartado de gama cromáti
     max-width: 18.75rem;
     max-height: 18.75rem;
     min-height: 18.75rem;
-    background-color: rgb(255, 243, 135);
+    background-color: var(--secondary-colour-yellow);
     padding: 2rem;
 
     box-shadow: 2px 2px 4px black;
@@ -1378,7 +1383,7 @@ En un caso futuro en el que más proyectos tuvieran un apartado de gama cromáti
 }
 
 mark {
-    background-color: yellow;
+    background-color: var(--secondary-colour-yellow);
 }
 
 

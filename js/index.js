@@ -1,7 +1,5 @@
 "use strict"
 
-
-
 //HEADER
 const header = document.querySelector(`.Main-header`)
 const homeLogo = document.querySelectorAll(`.Main-logo`)
