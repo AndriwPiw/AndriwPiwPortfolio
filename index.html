@@ -46,19 +46,9 @@
 
 
     <!-- PROBLEMAS GENERALES -->
-    <!-- en recent projects, en el index, sale una barra abajo cuando se scrollea demasiado -->
-    <!-- En móvil la parte de abajo de about no se ve, al mirarlo en mi propio móvil es como que la caja empieza muy abajo -->
-    <!-- parse sintaxix error en css????? -->
-    <!-- quitar la clase isActive solo en x media? - colocar un display none? -->
-    <!-- Poner responsive en las calerías pequeñas de cada proyecto -->
     <!-- back and forward button?? para poder cambiar más fácilmente de proyecto a proyecto -->
-    <!-- Reducir tamaño titulos proyectos en móvil, muy grande -->
-    <!-- Responsive de los discos radiohead en móvil, poner en columna -->
-    <!-- Título my own anthology thunderdrop se corta el título, definir tamaño
-             de la columna en responsive?, y ajustar bloque de texto -->
-    <!-- revisar estilo de las ul, li de los proyectos, no es la misma tipo + el LOGO 
-              SE VA AL LADO -->
-    <!-- revisar que no haya ninguna imagen sin texto alternativo, etc -->
+
+
 
 
 
@@ -72,34 +62,28 @@
 
     <!-- PROBLEMAS DE ESTILO -->
     <!-- Agrupar los tamaños de los textos bajo las mismas variables para unificar -->
-    <!-- Eliminar ratón y revisar qué css y js está linkeado -->
-    <!-- acordarme de poner la clase isactive en los tabs que nos encontremos -->
+  
 
     <!-- Reorganizar las clases de css y comentar adecuadamente -->
 
 
     <!-- CUESTIONES GENERALES -->
-
-    <!-- Reducir peso de algunas de las imagenes -->
-    <!-- Eliminar tipografías sin usar, deslinkear de todos los html -->
     <!-- poner TODOS los colores con un custom properties OBLIGATORIO -->
     <!-- Mover header fuera del main? Sería más correcto sintácticamente? -->
-    <!-- añadir title a todos los <a>  -->
     <!-- añadir la etiqueta picture + source a TODAS LAS IMÁGENES  -->
-    <!-- Añadir poster y Preload=none al vídeo?? necesario para un iframe?? -->
     <!-- colocar symbol en algún lado???  -->
 
     <!-- COMENTARIOS A AÑADIR O MODIFICAR -->
     <!-- revisar la guía y comentar correctamente todo -->
     <!-- quitar el parentesis en nnombres de las imagenes o dará problemas-->
-    <!-- hay varias imagenes sin alt, REVISAR-->
+
     <!-- Javascript, colocar HANDLER y optimizar -->
     <!-- COLOCAR LO DEL META en los archivos -->
     <!-- tipografía muy pequeña en el INDEX?, revisar, posiblemente en el header -->
-    <!-- añadir el target blank en los a de las redes sociales -->
     <!-- añadir symbols  -->
-    <!-- Añadir title a enlaces -->
     <!-- uso de IIFE DE JAVASCRIPT -->
+     <!-- en about, ajustar la altura maxima de las contenedoras, poner un porcentaje -->
+      <!-- en el about ajustar el tamaño de la foto, poner por debajo? -->
 
 
 
@@ -127,7 +111,7 @@
             <article class="recentProjects-project">
                 <div class="recentProjects-info">
                     <span class="recentProjects-number"> .01</span>
-                    <h3 class="recentProjects-h3"> <a href="project-tarot-nimbus.html" class="recentProjects-a">Nimbus
+                    <h3 class="recentProjects-h3"> <a title="Nimbus Tarot Project image" href="project-tarot-nimbus.html" class="recentProjects-a">Nimbus
                             Tarot</a>
                     </h3>
                     <span class="recentProjects-span">Printed Media * Packaging * Illustration</span>
@@ -138,7 +122,7 @@
                 </div>
 
                 <div class="recentProjects-images">
-                    <a href="project-tarot-nimbus.html" class="recentProjects-link"> <img
+                    <a title="Nimbus Tarot Project" href="project-tarot-nimbus.html" class="recentProjects-link"> <img
                             src="assets/01_nimbus_tarot/nimbustarotpreview.webp" alt="nimbus tarot preview"
                             class="recentProjects-preview"></a>
                 </div>
@@ -149,7 +133,7 @@
             <article class="recentProjects-project">
                 <div class="recentProjects-info">
                     <span class="recentProjects-number"> .02</span>
-                    <h3 class="recentProjects-h3"> <a href="project-my-own-anthology.html" class="recentProjects-a">My
+                    <h3 class="recentProjects-h3"> <a title="Anthology Project image" href="project-my-own-anthology.html" class="recentProjects-a">My
                             Own Anthology - CD Design</a>
                     </h3>
                     <span class="recentProjects-span">Branding * Collage * Illustration * Packaging </span>
@@ -161,7 +145,7 @@
                 </div>
 
                 <div class="recentProjects-images">
-                    <a href="project-my-own-anthology.html" class="recentProjects-link"> <img
+                    <a title="Anthology Project" href="project-my-own-anthology.html" class="recentProjects-link"> <img
                             src="assets/08_my_own_anthology_thunderdrop/mockup.webp" alt="my own anthology cd preview"
                             class="recentProjects-preview" loading="lazy"></a>
 
@@ -174,7 +158,7 @@
             <article class="recentProjects-project">
                 <div class="recentProjects-info">
                     <span class="recentProjects-number"> .03</span>
-                    <h3 class="recentProjects-h3"> <a href="project-suiss-style-poster-collection.html"
+                    <h3 class="recentProjects-h3"> <a title="Posters project image" href="project-suiss-style-poster-collection.html"
                             class="recentProjects-a">Swiss Style Poster - Collection</a>
                     </h3>
                     <span class="recentProjects-span">Printed Media * Poster design</span>
@@ -185,7 +169,7 @@
                 </div>
 
                 <div class="recentProjects-images">
-                    <a href="project-suiss-style-poster-collection.html" class="recentProjects-link"> <img
+                    <a title="posters project link" href="project-suiss-style-poster-collection.html" class="recentProjects-link"> <img
                             src="assets/03_Swiss_style_poster_collection/mockups1.webp" alt="swiss poster preview"
                             class="recentProjects-preview" loading="lazy"></a>
 
@@ -231,9 +215,9 @@
                 <div class="Header-wrapper">
                     <nav class="Header-nav Tabs">
                         <ul class="Tabs-ul">
-                            <li class="Tabs-li"><a href="index.html" class="Tabs-a isActive">Recent Projects</a></li>
-                            <li class="Tabs-li "><a href="gallery.html" class="Tabs-a">Project Gallery</a></li>
-                            <li class="Tabs-li"><a href="about.html" class="Tabs-a">About & Contact</a></li>
+                            <li class="Tabs-li"><a title="Recent Projects"  href="index.html" class="Tabs-a isActive">Recent Projects</a></li>
+                            <li class="Tabs-li "><a title="Project Gallery"  href="gallery.html" class="Tabs-a">Project Gallery</a></li>
+                            <li class="Tabs-li"><a title="About and Contact" href="about.html" class="Tabs-a">About & Contact</a></li>
                         </ul>
                     </nav>
 
@@ -241,13 +225,13 @@
                     <div class="Header-rrss Rrss">
 
                         <ul class="Rrss-ul">
-                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://www.instagram.com/saturni_idae/"><img
+                            <li class="Rrss-li Rs"><a title="instagram link"  target="_blank" class="Rs-a" href="https://www.instagram.com/saturni_idae/"><img
                                         class="Rs-img" src="assets/instagram.svg" alt="instagram icon"
                                         loading="lazy"></a></li>
-                            <li class="Rrss-li Rs"><a class="Rs-a" href="https://x.com/saturni_idae"><img class="Rs-img"
+                            <li class="Rrss-li Rs"><a title="twitter link" target="_blank" class="Rs-a" href="https://x.com/saturni_idae"><img class="Rs-img"
                                         src="assets/twitter.svg" alt="twitter icon" loading="lazy"></a>
                             </li>
-                            <li class="Rrss-li Rs"><a class="Rs-a"
+                            <li class="Rrss-li Rs"><a title="carrd link" target="_blank" class="Rs-a"
                                     href="https://saturni-idae.carrd.co/?utm_source=ig&utm_medium=social&utm_content=link_in_bio"><img
                                         class="Rs-img" src="assets/carrd.svg" alt="carrd icon" loading="lazy"></a></li>
                         </ul>
@@ -260,19 +244,19 @@
             <div class="Header-markers Markers">
                 <ul class="Markers-ul">
                     <!-- La clase isActive indica qué marcador está activado, indicando qué parte de la web se está visitando -->
-                    <li class="Markers-li isActive"><a href="index.html" class="Markers-a">Aa</a></li>
-                    <li class="Markers-li"><a href="gallery.html" class="Markers-a">Bb</a></li>
-                    <li class="Markers-li"><a href="about.html" class="Markers-a">Cc</a></li>
+                    <li class="Markers-li isActive"><a title="marker a" href="index.html" class="Markers-a">Aa</a></li>
+                    <li class="Markers-li"><a title="marker b" href="gallery.html" class="Markers-a">Bb</a></li>
+                    <li class="Markers-li"><a title="marker c" href="about.html" class="Markers-a">Cc</a></li>
                 </ul>
 
                 <ul class="Markers-ul">
-                    <li class="Markers-li"> <a href="mailto:asanartworkshop@gmail.com"
+                    <li class="Markers-li"> <a title="mail" href="mailto:asanartworkshop@gmail.com"
                             class="Markers-a">asanartworkshop@gmail.com</a>
                     </li>
                 </ul>
 
                 <ul class="Markers-ul">
-                    <li class="Markers-li"> <a href="https://saturni-idae-illustration.carrd.co/" class="Markers-a"
+                    <li class="Markers-li"> <a title="illustration portfolio" href="https://saturni-idae-illustration.carrd.co/" class="Markers-a"
                             target="_blank" rel="noreferrer">Illustration Portfolio</a> </li>
                 </ul>
             </div>
