@@ -1,7 +1,41 @@
+/* ///////////////////////////////////////////////////////*/
 /* ESTRUCTURA DEL DOCUMENTO index.css */
+/* 
+
+- Normalizador general
+- Custom Properties
+   - Colores
+    - Tipografía
+    - Márgenes y paddings generales
+
+- Normalizador específico   
+- Scroll bar
 
 
-/* NORMALIZADOR*/
+GENERAL
+- Main
+    - Home logo - Header logo
+    - Main Header
+    - Main Content
+
+- Recent Projects
+- Project Gallery
+ - Proyecto individual - Individual Project
+     - Galerías por tamaños
+     - Cartas / Tarjetas del proyecto
+     - Bloques de contenido
+     - Muestrario de colores de cada proyecto
+     - Carrousel
+- About Me
+
+MEDIA QUERIES
+
+UTILIDADES
+
+*/
+/* ///////////////////////////////////////////////////////*/
+
+/* NORMALIZADOR general */
 * {
     margin: 0;
     padding: 0;
@@ -53,7 +87,7 @@
     system-ui;
 
 
-    /* Tamaños tipografías */
+    /* Tamaños tipografías generales */
     /* Tamaño texto cuerpo */
     --font-size-body: 1em;
 
@@ -72,7 +106,7 @@
     --font-size-spanProjectType: 0.9em;
 
     /* Tamaño texto enlaces */
-    --font-size-a: 1em;
+    --font-size-a: 1.2em;
 
 
     /* Márgenes y paddings generales */
@@ -85,7 +119,7 @@
 
 
 
-/* NORMALIZADOR*/
+/* NORMALIZADOR específico*/
 h1,
 h2,
 h3,
@@ -138,23 +172,6 @@ html {
 
 
 
-/* Animación para la carga de imágenes */
-
-@keyframes imageLoading {
-    0% {
-        transform: translateX(-25px);
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-
-}
 
 
 /* GENERAL */
@@ -166,130 +183,6 @@ body {
     /* cursor: none; */
 }
 
-
-
-/* MOUSE-CURSOR */
-/* .Cursor {
-
-    width: 2em;
-    height: 2em;
-    border: 2px solid var(--primary-colour-purple);
-    border-radius: 50%;
-
-    position: fixed;
-    top: -0.625rem;
-    left: -0.625rem;
-
-    transform: all 1s ease;
-    pointer-events: none;
-
-    z-index: 2;
-} */
-
-
-
-/* PRE-LOAD - PÁGINA TRANSITORIA DE INICIO */
-
-.Pre-load {
-    background-color: var(--secondary-colour-black);
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    top: 0rem;
-}
-
-.isClicked {
-    animation: slideUp 2s ease-out 1 both;
-}
-
-@keyframes slideUp {
-
-    from {
-        transform: translateY(0px);
-    }
-
-    to {
-        transform: translateY(-100rem);
-    }
-
-}
-
-
-.Pre-load-span {
-    color: var(--primary-colour-purple);
-    font-size: 45vh;
-    transform: scaleY(2);
-
-    margin-bottom: 80px;
-
-    pointer-events: none;
-}
-
-Button.Pre-load--click {
-    color: var(--secondary-colour-white);
-    background-color: var(--secondary-colour-black);
-    margin-bottom: 80px;
-}
-
-Button.Pre-load--click:hover {
-    color: var(--primary-colour-purple);
-}
-
-.Pre-load--loading {
-    width: 300px;
-
-    display: flex;
-    flex-flow: column nowrap;
-
-    justify-content: center;
-    align-items: center;
-
-}
-
-.Loading-span {
-    color: var(--secondary-colour-white);
-    margin-bottom: 9.6px;
-
-    text-transform: uppercase;
-}
-
-.Loading-bar {
-    width: 100%;
-    height: 20px;
-
-    border: 1px solid var(--secondary-colour-white);
-    border-radius: .625rem;
-    padding: 4.8px;
-
-    overflow: hidden;
-
-}
-
-.Loading-fill {
-    background-color: var(--secondary-colour-white);
-    width: 12.5rem;
-    height: 100%;
-    border-radius: .625rem;
-
-    animation: loadingAnimation 2s ease infinite;
-}
-
-@keyframes loadingAnimation {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(300%);
-    }
-}
-
-
 /* MAIN */
 
 .Main {
@@ -299,16 +192,15 @@ Button.Pre-load--click:hover {
 
 
 /* HOME LOGO - HEADER LOGO */
-
 .Main-homeButton {
     width: 100px;
     position: fixed;
     top: 1px;
     left: 30px;
     z-index: 1;
-
 }
 
+/* Cuando está isActive el logo aparece en pantalla y puede ser clicado para acceder al header o desactivarlo */
 .Main-homeButton .isActive {
     transition: all 3s ease;
     opacity: 1;
@@ -326,7 +218,6 @@ Button.Pre-load--click:hover {
 }
 
 
-
 .Clickeye {
     position: fixed;
 
@@ -336,8 +227,7 @@ Button.Pre-load--click:hover {
     animation: shaking 0.2s ease infinite;
 }
 
-/* añadir un active para desactivar en recent projects */
-/* añadir efecto de contra más te acercas más rápido va? */
+/* Animación que mueve el texto para avisar al visitante de la web que puede clicar en el ojo del logo */
 @keyframes shaking {
 
     0% {
@@ -366,7 +256,6 @@ Button.Pre-load--click:hover {
 
 
 /* MAIN HEADER*/
-
 .Main-header {
     position: fixed;
     top: 0;
@@ -413,6 +302,7 @@ Button.Pre-load--click:hover {
 
 }
 
+/* Agrupación de info */
 .Presentation-divider {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
@@ -427,13 +317,12 @@ Button.Pre-load--click:hover {
 
 }
 
+/* Da formato al subtítulo de la web contenido en el header */
 .Header-role {
     font-family: var(--font-family-space-grotesk);
     color: var(--primary-colour-purple);
     font-size: 1.3em;
 }
-
-
 
 
 /*  Divisor del header - Contiene el navegador a las otras partes principales de la web*/
@@ -442,11 +331,13 @@ Button.Pre-load--click:hover {
     background-color: var(--secondary-colour-white);
 }
 
+/* Navegador del header, para ir a las otras páginas de la web */
 .Header-nav {
     width: 100%;
     background-color: var(--secondary-colour-white);
 }
 
+/* Pestañas de las diferentes páginas */
 .Tabs-ul {
     display: flex;
     flex-flow: column nowrap;
@@ -476,6 +367,7 @@ Button.Pre-load--click:hover {
     padding: 10px 0 10px 0;
 }
 
+/* El formato del <a> será diferente si estamos en esa página */
 .Tabs-a.isActive {
     color: var(--primary-colour-purple);
 }
@@ -503,7 +395,7 @@ Button.Pre-load--click:hover {
 
 
 
-/* Post-Its decorativos del Header -> marcadores de página y hyperlinks varios */
+/* Marcadores decorativos del header. Marcan la página visitada y hyperlinks varios */
 .Header-markers {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -557,25 +449,13 @@ Cuando se pasa el mouse por encima estos crecen, mostrando el texto de los vínc
 
 
 
-/* MARQUESINA */
-/* Elemento que se repite en todas las partes de la web
-Su función principal es indicar información clave sobre la página que se está visitando, indicaciones de scroll y decoración mínima */
-
-/* .Main-marquee {
-background-color: var(--secondary-colour-black);
-    min-height: 300vh;
-   min-width: 2vw;
-
-} */
-
 
 
 
 
 
 /* MAIN CONTENT*/
-
-
+/* Título de la página en la que nos encontramos */
 .Main-h2 {
     color: var(--primary-colour-purple);
     font-family: var(--font-family-space-grotesk);
@@ -590,7 +470,12 @@ background-color: var(--secondary-colour-black);
     margin-bottom: 2vh;
 }
 
+
+
 /* RECENT PROJECTS */
+/* Proyectos recientes mostrados */
+/* éstos son visualizados en pantalla completa, gracias al scroll snap nos aseguramos que se ajusten por completo a la view
+Para facilitar la navegación en pantallas más pequeñas el scroll-snap-type cambia */
 .recentProjects {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -622,8 +507,6 @@ background-color: var(--secondary-colour-black);
 }
 
 
-
-
 .recentProjects-images {
     overflow: hidden;
 }
@@ -637,6 +520,7 @@ img.recentProjects-preview {
 
 }
 
+/* Cuando pasamos el mouse por encima de la imagen del proyecto reciente, esta aumenta de tamaño */
 .recentProjects-preview:hover {
     transform: scale(1.1);
 }
@@ -655,6 +539,7 @@ img.recentProjects-preview {
 }
 
 
+/* Estilos de cada proyecto reciente */
 
 .recentProjects-number {
     font-size: 15em;
@@ -662,7 +547,6 @@ img.recentProjects-preview {
     font-family: var(--font-family-space-grotesk);
     animation: flow-left 1s ease 1;
 }
-
 
 .recentProjects-h3 {
     color: var(--secondary-colour-black);
@@ -691,17 +575,15 @@ img.recentProjects-preview {
 
 }
 
-
 .recentProjects-p {
     color: var(--secondary-colour-black);
     font-family: var(--font-family-space-mono);
     font-size: var(--font-size-body);
     text-align: justify;
     animation: flow-left 1.5s ease 1;
-
-
 }
 
+/* Animación general de los elementos del proyecto reciente mostrado */
 @keyframes flow-left {
     0% {
 
@@ -717,6 +599,7 @@ img.recentProjects-preview {
 
 
 /* PROJECT GALLERY */
+/* Galería de todos los proyectos */
 .projectGallery {
     padding-left: 25vh;
 
@@ -738,8 +621,6 @@ img.recentProjects-preview {
 
 
 /* navegador de contenido de la galería de proyectos */
-
-
 .GalleryNav {
     position: fixed;
     top: 5vh;
@@ -762,6 +643,7 @@ img.recentProjects-preview {
     transition: all 0.5s ease;
 }
 
+/* Cuando pasamos el ratón por encima de la categoría del menú, ésta cambia de formato*/
 .GalleryNav-li:hover {
     padding-left: 2rem;
     color: var(--secondary-colour-black);
@@ -774,6 +656,7 @@ img.recentProjects-preview {
     font-style: italic;
 }
 
+/* Cuando se activa una categoría se activa un pseudo-elemento para resaltarla */
 .GalleryNav-li.isActive::before {
     content: ">";
 }
@@ -789,6 +672,7 @@ img.recentProjects-preview {
 
 }
 
+/* Proyectos individuales */
 /* Clase general para cada proyecto de la galería */
 .projectGallery-project {
     min-width: 100%;
@@ -810,12 +694,11 @@ img.recentProjects-preview {
     animation: projectgallery-slideIn 0.8s ease 1 both;
 }
 
+/* Animación que se activa cuando un proyecto se muestra en la galería */
 @keyframes projectgallery-slideIn {
 
     0% {
-
         transform: translateX(-50px);
-
     }
 
     50% {
@@ -823,7 +706,6 @@ img.recentProjects-preview {
     }
 
     100% {
-
         transform: translateX(0px);
     }
 
@@ -838,6 +720,7 @@ img.recentProjects-preview {
     transition: all .5s ease;
 }
 
+/* Cuando pasamos el mouse sobre una de las imágenes de la galería ésta cambia de formato */
 .projectGallery-imgContainer:hover {
     opacity: 0.5;
 }
@@ -849,6 +732,7 @@ img.recentProjects-preview {
 }
 
 
+/* Contenedora de información del proyecto */
 .projectGallery-infoContainer {
     /* min-height: 35%; */
     padding: 1.25em;
@@ -862,6 +746,7 @@ img.recentProjects-preview {
 
 }
 
+/* Contenedor del título */
 .dividerTitle {
     min-width: 40%;
 }
@@ -887,9 +772,8 @@ img.recentProjects-preview {
     font-style: italic;
     color: var(--primary-colour-purple);
     font-family: var(--font-family-space-mono);
-
-
 }
+
 
 .projectGallery-p {
     text-align: justify;
@@ -906,13 +790,16 @@ img.recentProjects-preview {
     transition: color 0.5s ease;
 }
 
+/* Cuando pasamos el mouse sobre "see more" éste cambia de formato */
 .projectGallery-a:hover {
     color: var(--primary-colour-purple);
 
 }
 
 
-/* MAIN PROJECT V1 - PROYECTO INDIVIDUAL - Proyecto siendo visualizado*/
+/* PROYECTO INDIVIDUAL - Proyecto siendo visualizado*/
+/* Clases de los proyectos individuales */
+
 .Project {
     min-height: 100vh;
     width: 100%;
@@ -925,15 +812,15 @@ img.recentProjects-preview {
 
 }
 
+/* Agrupación de las columnas */
 .Project-columnWrapper {
     display: flex;
     flex-flow: row nowrap;
 
     position: relative;
-
-
 }
 
+/* Columnas individuales */
 .Project-column {
     width: 100%;
     min-height: 50vh;
@@ -943,6 +830,7 @@ img.recentProjects-preview {
     animation: flow-left 1.5s ease 1;
 }
 
+/* Header del proyecto*/
 .Project-header {
     margin-bottom: 1.875rem;
 }
@@ -951,8 +839,6 @@ img.recentProjects-preview {
     font-size: var(--font-size-heading-h2);
     color: var(--secondary-colour-black);
     font-family: var(--font-family-space-grotesk);
-
-
 }
 
 .Project-h3 {
@@ -984,16 +870,17 @@ img.recentProjects-preview {
     font-family: var(--font-family-space-mono);
     font-size: 1.2em;
     font-style: italic;
-
 }
 
+/* Cuerpo del proyecto */
 .Project-body {
     margin-bottom: 0.3rem;
 }
 
-/* galerías por tamaños */
-.Project-gallery {
 
+/* galerías por tamaños */
+/* Galerías de imágenes dependiendo del formato de visualización */
+.Project-gallery {
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     min-width: 100%;
@@ -1034,7 +921,6 @@ img.recentProjects-preview {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .Project-main-image {
@@ -1043,17 +929,21 @@ img.recentProjects-preview {
     object-fit: cover;
 }
 
-
+/* Cartas / tarjetas del proyecto */
 /* clases para visualización de cartas */
+
+/* Por un lado, tenemos las miniaturas de las cartas / tarjetas que nos muestran las previews de las mismas
+Al pasar el mouse sobre ellas, el hover hace que se desplacen.
+Al clicar en ellas, son activadas y el formato cambia. - Mediante el JS mostramos esa tarjeta o carta seleccionada en el
+CARD VIEWER del proyecto */
+
 .card {
     border-radius: 5px;
     perspective: 1900px;
     transition: all 1s ease;
-
 }
 
 .card:hover {
-
     transform: translateY(-10px);
 }
 
@@ -1061,8 +951,9 @@ img.recentProjects-preview {
     opacity: 50%;
 }
 
-.cardViewer {
+/* Cuando se pasa el ratón sobre la tarjeta o carta del CARDVIEWER, esta gira, dejando mostrar la parte trasera definida en el HTML */
 
+.cardViewer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1071,9 +962,10 @@ img.recentProjects-preview {
     perspective: 2000px;
 
     animation: imageLoading 2s ease both;
-
 }
 
+/* Creamos el formato para la parte delantera y trasera del la tarjeta o carta 
+siendo visualizada en el CARDVIEWER */
 .cardViewer:hover .cardViewer-front {
     transform: rotateY(180deg);
 }
@@ -1098,19 +990,17 @@ img.recentProjects-preview {
     overflow: hidden;
 }
 
+
 /* Anverso carta */
 .cardViewer-front {
     transform: none;
 }
-
-
 
 .cardViewer-img--front {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 
 
 /* Reverso carta */
@@ -1126,32 +1016,38 @@ img.recentProjects-preview {
 
 
 
-
 /* Bloques de contenido */
+/* Bloques secundarios de información del proyecto */
 .Project-block {
     margin-bottom: 1rem;
 }
 
 .Block {
-
     min-width: 100%;
     max-height: 50rem;
 
     overflow: hidden;
 }
 
+/* Bloque con columnas */
 .Block--columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* Formato de imágenes del bloque de contenido */
 .Block-img {
-
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Clase exclusiva para el overview, información secundaria del proyecto */
+.Overview {
+    width: 40%;
+}
+
+/* Banner del proyecto si contiene uno */
 .Banner {
     max-height: 15rem;
 }
@@ -1168,23 +1064,20 @@ img.recentProjects-preview {
 
 
 
-.Overview {
-    width: 40%;
-}
-
 .Project-video {
     margin-bottom: 2.5rem;
 }
 
-/* Muestrario de colores de cada proyecto */
-.Project-colours {
 
+/* Muestrario de colores de cada proyecto */
+/* Paletas de colores */
+/* Los propios colores son definidos en el HTML con un style ya que éstos varían enormemente de proyecto a proyecto
+Para esta web, ya que solo uno de los proyectos tiene este apartado, se ha definido directamente en el propio HTML
+En un caso futuro en el que más proyectos tuvieran un apartado de gama cromática, éstos colores se definirían en el propio CSS de cada proyecto individual si se diera el caso
+ */
+.Project-colours {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center; */
 
     gap: 1rem;
 }
@@ -1207,10 +1100,11 @@ img.recentProjects-preview {
     position: absolute;
     bottom: .625rem;
     left: .625rem;
-
 }
 
+
 /* CARROUSEL */
+/* Carrousel de imágenes para los proyectos */
 .Project-carrousel {
     max-width: 60vh;
     max-height: 100vh;
@@ -1236,11 +1130,11 @@ img.recentProjects-preview {
     object-fit: cover;
 }
 
+/* Botones del carrousel que permiten visualizar la imagen previa o siguiente */
 .Carrousel-buttons {
     width: 100%;
     min-height: 3.125rem;
     background-color: var(--secondary-colour-black);
-
 
     display: flex;
     flex-flow: row nowrap;
@@ -1267,7 +1161,7 @@ img.recentProjects-preview {
 }
 
 
-/* PROJECT MY OWN ANTHOLOGY */
+/* Proyecto con CD */
 .CD {
     margin: auto;
     width: 70%;
@@ -1286,6 +1180,8 @@ img.recentProjects-preview {
 
 }
 
+
+
 /* ABOUT ME */
 .About {
     padding-left: 25vh;
@@ -1293,13 +1189,12 @@ img.recentProjects-preview {
     width: 100%;
     min-height: 100vh;
 
-
     display: flex;
     flex-flow: row nowrap;
 
-
 }
 
+/* Clase contenedora de columnas */
 .About-columnWrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -1313,17 +1208,17 @@ img.recentProjects-preview {
     display: flex;
     flex-flow: column nowrap;
     overflow: hidden;
-
-    justify-content: space-between;
 }
 
 .About-column--small {
     background-color: var(--secondary-colour-black);
     min-width: 50%;
+    max-height: 100vh;
 
     overflow: hidden;
 }
 
+/* Agrupación de texto */
 .About-textWrapper {
     position: relative;
 
@@ -1333,7 +1228,9 @@ img.recentProjects-preview {
 }
 
 
+/* DECORACIÓN DEL ABOUT */
 
+/* Imagen perfil */
 .About-clip {
     max-width: 60px;
     position: absolute;
@@ -1342,7 +1239,7 @@ img.recentProjects-preview {
 }
 
 .About-idPhoto {
-    width: 10vw;
+    width: 9.375rem;
     box-shadow: 2px 2px 3px black;
 
     position: absolute;
@@ -1350,6 +1247,14 @@ img.recentProjects-preview {
     left: 1rem;
 
     transform: rotate(-15deg);
+}
+
+/* Garabato del fondo */
+.Scribble {
+    width: 30vh;
+    position: absolute;
+    right: -5rem;
+    bottom: -6rem;
 }
 
 .About-imgWrapper {
@@ -1364,15 +1269,14 @@ img.recentProjects-preview {
 }
 
 
-
+/* Imagen de la columna derecha */
 .About-imgGraph {
     width: 100%;
     max-height: 100%;
     object-fit: cover;
-
 }
 
-
+/* Post it y celo */
 .About-postIt--normal {
     min-width: 18.75rem;
     max-width: 18.75rem;
@@ -1382,13 +1286,6 @@ img.recentProjects-preview {
     padding: 2rem;
 
     box-shadow: 2px 2px 4px black;
-}
-
-.Scribble {
-    width: 30vh;
-    position: absolute;
-    right: -5rem;
-    bottom: -6rem;
 }
 
 .About-bigClue {
@@ -1426,6 +1323,8 @@ img.recentProjects-preview {
     transform: rotate(40deg);
 }
 
+
+/* Textos principales del about */
 .About-h3 {
     font-size: var(--font-size-heading-h3);
     font-family: var(--font-family-space-mono);
@@ -1483,6 +1382,23 @@ mark {
 }
 
 
+/* Animaciones generales de la web */
+/* Animación para la carga de imágenes */
+@keyframes imageLoading {
+    0% {
+        transform: translateX(-25px);
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 
 
 /* @ MEDIA */
@@ -1491,6 +1407,8 @@ mark {
 /* 1500px */
 @media (max-width:1500px) {
 
+
+    /* RECENT PROJECT */
     .recentProjects-number {
         font-size: 6em;
     }
@@ -1499,10 +1417,8 @@ mark {
     .GalleryNav-ul {
         width: 30vh;
     }
-
-
-
 }
+
 
 /* 1400px */
 @media (max-width:1400px) {
@@ -1530,7 +1446,6 @@ mark {
     }
 
     /* ABOUT */
-
     .About-bigClue {
         display: none;
     }
@@ -1569,8 +1484,6 @@ mark {
 /* 1000px */
 @media (max-width:1000px) {
 
-    /* MAIN CONTENT */
-
 
     /* HEADER */
     .Main-header {
@@ -1595,10 +1508,6 @@ mark {
     .Main-homeButton {
         display: none;
     }
-
-
-
-
 
 
     .Header-presentation {
@@ -1629,12 +1538,9 @@ mark {
 
     }
 
-
     .Tabs-ul {
         flex-flow: column nowrap;
     }
-
-
 
     .Tabs-a {
         font-size: 3em;
@@ -1658,7 +1564,6 @@ mark {
     }
 
 
-
     /* RECENT PROJECTS */
 
     .recentProjects {
@@ -1679,21 +1584,12 @@ mark {
     }
 
 
-
     .recentProjects-info {
         max-width: 100%;
         min-height: 50%;
         padding: 10px 40px;
         justify-content: start;
     }
-
-
-
-
-    .Main-marquee {
-        display: none;
-    }
-
 
 
 
@@ -1714,7 +1610,7 @@ mark {
     }
 
 
-    /* PROJECTV1 */
+    /* INDIVIDUAL PROJECT - Proyecto individual siendo visualizado */
     .Project {
         padding: 2rem;
     }
@@ -1758,10 +1654,6 @@ mark {
         display: none;
     }
 
-
-
-
-
 }
 
 
@@ -1770,7 +1662,7 @@ mark {
 
 
 
-    /* PROYECTO V1 */
+    /* INDIVIDUAL PROJECT - Proyecto individual siendo visualizado */
     .recentProjects-images {
         min-height: 50%;
     }
@@ -1795,6 +1687,8 @@ mark {
 
 /* 700px */
 @media (max-width:700px) {
+
+      /* INDIVIDUAL PROJECT - Proyecto individual siendo visualizado */
     .Block--columns {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1808,18 +1702,13 @@ mark {
 /* 550px */
 @media (max-width:550px) {
 
-
-    /* Tamaño texto encabezado h3 */
-    .recentProjects-h3 {
-        font-size: 2em;
-    }
-
-
     /* RECENT PROJECTS */
     .recentProjects-info {
         min-height: 60%;
     }
-
+ .recentProjects-h3 {
+        font-size: 2em;
+    }
 
     /* GALERÍA DE PROYECTOS */
     .projectGallery-project {
@@ -1830,7 +1719,7 @@ mark {
         max-height: 40vh;
     }
 
-    /* PROYECTO V1 */
+    /* INDIVIDUAL PROJECT - Proyecto individual siendo visualizado */
     .Project-h2 {
         font-size: 3em;
     }
