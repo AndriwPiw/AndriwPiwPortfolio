@@ -1,7 +1,7 @@
 /* ESTRUCTURA DEL DOCUMENTO index.css */
 
 
-/* NORMALIZADOR */
+/* NORMALIZADOR*/
 * {
     margin: 0;
     padding: 0;
@@ -85,7 +85,7 @@
 
 
 
-
+/* NORMALIZADOR*/
 h1,
 h2,
 h3,
@@ -135,27 +135,6 @@ html {
 ::-webkit-scrollbar {
     display: none;
 }
-
-
-/* ENLAZAMOS LA TIPOGRAFÍA VARIABLE */
-.montserrat-variable {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.jacquard-24-regular {
-    font-family: "Jacquard 24", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.jacquard-12-regular {
-    font-family: "Jacquard 12", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
 
 
 
