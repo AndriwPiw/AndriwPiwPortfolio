@@ -1188,6 +1188,28 @@ En un caso futuro en el que más proyectos tuvieran un apartado de gama cromáti
 
 }
 
+/* project IFRAME */
+
+.Project-iframe{
+position: absolute;
+width: 100%;
+height: 100%;
+
+top: 0;
+
+}
+
+/* IFRAME VIDEO CONTAINER */
+.Project-iframeContainer{
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+
+/* 16:9  */
+.Panoramic{
+padding-top: 56%;
+}
 
 
 /* ABOUT ME */
