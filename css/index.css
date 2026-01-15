@@ -184,9 +184,9 @@ html {
 body {
     background-color: var(--secondary-colour-black);
     position: relative;
-
-    /* cursor: none; */
 }
+
+
 
 /* MAIN */
 
@@ -202,7 +202,7 @@ body {
     position: fixed;
     top: 1px;
     left: 30px;
- 
+
 }
 
 /* Cuando está isActive el logo aparece en pantalla y puede ser clicado para acceder al header o desactivarlo */
@@ -361,7 +361,7 @@ body {
 }
 
 /* Al pasar el ratón por encima del tab éste cambia */
-.Tabs-li:hover{
+.Tabs-li:hover {
     background-color: var(--secondary-colour-grey);
 }
 
