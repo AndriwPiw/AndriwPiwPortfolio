@@ -193,6 +193,8 @@ body {
 .Main {
     display: flex;
     flex-flow: row nowrap;
+
+    overflow: hidden;
 }
 
 
@@ -279,7 +281,7 @@ body {
 /* El header está desactivado al entrar a la web, solo se activa al clicar en el logo */
 /* Al activarse se desplaza desde el borde de la web superponiéndose sobre el contenido principal */
 .Main-header.notActive {
-    transform: translateX(-300px);
+    transform: translateX(-18.75rem);
 }
 
 .Main-header.isActive {
